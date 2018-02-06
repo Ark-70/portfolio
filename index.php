@@ -11,30 +11,32 @@
 </head>
 <body>
 	<header>
+		<div class="header__backgroundimg"></div>
 		<h1>David</h1>
 		<h1>Traparic</h1>
 		<!-- <canvas id="mattercanvas"></canvas> -->
 	</header>
-		
-		<section id="path">
-			<div class="container-fluid">
-				<h2>Mon parcours :</h2>
-				<p>Lorem ibsum ma bite</p>
-			</div>
-		</section>
 
-		<section id="skills">
-			<div class="container-fluid">
-				<h2>Mes compétences :</h2>
-				<canvas></canvas>
-			</div>
-		</section>
-		
-		<section id="creations">
-			<div class="container-fluid">
-				<p>Lorem ibsum ma bite</p>
-			</div>
-		</section>
+
+	<section id="path">
+		<div class="container-fluid">
+			<h2>Mon parcours :</h2>
+			<p>Lorem ibsum</p>
+		</div>
+	</section>
+
+	<section id="skills">
+		<div class="container-fluid">
+			<h2>Mes compétences :</h2>
+			<canvas></canvas>
+		</div>
+	</section>
+
+	<section id="creations">
+		<div class="container-fluid">
+			<p>Lorem ibsum ma bite</p>
+		</div>
+	</section>
 
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

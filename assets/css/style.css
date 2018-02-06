@@ -11,7 +11,7 @@ html{
 
 body{
 	/*background-color:grey;*/
-	background-color:#3B3B3B;
+	/*background-color:#3B3B3B;*/
 }
 
 header{
@@ -20,7 +20,17 @@ header{
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	background-color:#3B3B3B;
+	/*background-color:#3B3B3B;*/
+  /*filter: brightness(-50%);*/
+}
+
+.header__backgroundimg{
+  height:100%;
+  width:100%;
+  position:absolute;
+  background-image: url(../background.png);
+  filter: brightness(23%);
+  z-index:0;
 }
 
 header>h1{
@@ -29,6 +39,8 @@ header>h1{
 	color:#e59400;
 	margin:0;
 	font-size: 15em;
+  z-index:2;
+   text-shadow: 3px 3px 1px #888888;
 }
 
 #mattercanvas{
@@ -36,9 +48,10 @@ header>h1{
 }
 
 section{
-	background-color:lightgrey;
 	color:white;
 }
+
+
 
 h2, h3{
 	position:relative;
