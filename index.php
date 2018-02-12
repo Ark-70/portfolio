@@ -1,4 +1,3 @@
-<?php get_the_content() ?>
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -34,7 +33,7 @@
 
 	<section id="creations">
 		<div class="container-fluid">
-			<p>Lorem ibsum ma bite</p>
+			<p>Lorem ibsum</p>
 		</div>
 	</section>
 

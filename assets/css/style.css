@@ -79,7 +79,7 @@ h2:focus:before {
 }
 
 section{
-	background-image: url(../background.png);
+	/*background-image: url(../background.png);*/
 	padding: 30px 0;
 }
 
