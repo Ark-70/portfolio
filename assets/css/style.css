@@ -33,7 +33,7 @@ header{
   z-index:0;
 }
 
-header>h1{
+header h1{
 	line-height: 0.9em;
 	font-family: asgalt,sans-serif;
 	color:#e59400;
@@ -83,10 +83,16 @@ section{
 	padding: 30px 0;
 }
 
+section:before{
+  content:"";
+	background-image: url(../background.png);
+  filter: brightness(80%);
+}
+
 .container-fluid{
 	width: 90%;
 	padding: 15px 0;
 }
 section>.container-fluid{
-	background:#3B3B3B;
+  background:#3B3B3B;
 }

@@ -1,4 +1,4 @@
-<?php  ?>
+<?php get_the_content() ?>
 
 <!DOCTYPE html>
 <html lang="fr">
