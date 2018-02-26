@@ -17,22 +17,23 @@
 	</header>
 
 
-	<section id="path">
+	<section class="path">
 		<div class="container-fluid">
-			<h2>Mon parcours :</h2>
+			<h2><span class="underline">Mon parcours :</span></h2>
 			<p>Lorem ibsum</p>
 		</div>
 	</section>
 
-	<section id="skills">
+	<section class="skills">
 		<div class="container-fluid">
-			<h2>Mes compétences :</h2>
+			<h2><span class="underline">Mes compétences :</span></h2>
 			<canvas></canvas>
 		</div>
 	</section>
 
-	<section id="creations">
+	<section class="creations">
 		<div class="container-fluid">
+
 			<p>Lorem ibsum</p>
 		</div>
 	</section>
