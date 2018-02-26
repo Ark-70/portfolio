@@ -1,9 +1,9 @@
-#creations .container-fluid{
+.creations .container-fluid{
   display:flex;
   justify-content: space-between;
 }
 
-#creations .container-fluid article{
+.creations .container-fluid article{
   width:50%;
 }
 
