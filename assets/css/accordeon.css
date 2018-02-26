@@ -1,0 +1,51 @@
+#creations .container-fluid{
+  display:flex;
+  justify-content: space-between;
+}
+
+#creations .container-fluid article{
+  width:50%;
+}
+
+.creations__accordeon{
+  overflow:hidden;
+}
+
+.accordeon__titre{
+  border:1px solid grey;
+  border-radius: 0.2em;
+  cursor:pointer;
+  margin:0;
+  border-collapse: collapse;
+  padding:5px;
+}
+
+.accordeon__titre--selected{
+  text-shadow:1px 1px 3px #cacaca;
+}
+.accordeon__contentbox{
+  overflow: hidden;
+  text-align:center;
+  height:0;
+
+}
+
+.accordeon__contentbox--open{
+  height:auto;
+}
+
+.accordeon__desc{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  padding:11px;
+  text-align:justify;
+  border-bottom:1px solid grey;
+  border-left:1px solid grey;
+  border-right:1px solid grey;
+  border-radius:0.2em;
+  border-collapse: collapse;
+}
+.accordeon__desc p{
+  margin-bottom:0.6rem;
+}
