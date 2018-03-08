@@ -44,8 +44,8 @@ header h1{
 	line-height: 0.9em;
 	font-family: asgalt,sans-serif;
 	color:#e59400;
-	margin:0;
-	font-size: 15rem;
+  margin:0;
+	font-size: 25rem;
   z-index:2;
    text-shadow: 3px 3px 1px #888888;
 }

@@ -11,9 +11,13 @@ https://app.netlify.com/signup#_ga=2.154495422.728589584.1519897243-606316059.15
 <head>
   <meta charset="UTF-8">
   <title>portfolio </title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+
   <!-- <link rel="stylesheet" href="assets/css/accordion.css"> -->
   <link rel="stylesheet" href="assets/css/accordeon.css">
+  <link rel="stylesheet" href="assets/css/skills.css">
   <link rel="stylesheet" href="assets/css/style.css">
 
 </head>
@@ -36,20 +40,146 @@ https://app.netlify.com/signup#_ga=2.154495422.728589584.1519897243-606316059.15
 	<section class="skills">
 		<div class="container-fluid">
 			<h2><span class="underline">Mes compétences :</span></h2>
-      <div class="skills__barcontainer">
-        <div class="progress vertical">
-            <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 40%;"></div>
+
+      <div class="skills__barscontainer">
+
+
+        <div class="skills_singularskill">
+          <div class="progress progress-bar-vertical">
+            <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="height: 30%;">
+              <span class="sr-only">30% Complete</span>
+            </div>
+          </div>
+          <i class="devicon devicon-github-plain"></i>
         </div>
-        <div class="progress vertical">
-            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
+
+        <div class="skills_singularskill">
+          <div class="progress progress-bar-vertical">
+            <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="height: 30%;">
+              <span class="sr-only">30% Complete</span>
+            </div>
+          </div>
+          <i class="devicon devicon-git-plain"></i>
         </div>
-          <div class="progress vertical">
-            <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 80%;"></div>
+
+        <div class="skills_singularskill">
+          <div class="progress progress-bar-vertical">
+            <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="height: 30%;">
+              <span class="sr-only">30% Complete</span>
+            </div>
+          </div>
+          <i class="devicon devicon-php-plain"></i>
         </div>
-        <div class="progress vertical">
-            <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 95%;"></div>
+
+        <div class="skills_singularskill">
+          <div class="progress progress-bar-vertical">
+            <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="height: 30%;">
+              <span class="sr-only">30% Complete</span>
+            </div>
+          </div>
+          <i class="devicon devicon-css3-plain"></i>
         </div>
+
+        <div class="skills_singularskill">
+          <div class="progress progress-bar-vertical">
+            <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="height: 30%;">
+              <span class="sr-only">30% Complete</span>
+            </div>
+          </div>
+          <i class="devicon devicon-html5-plain"></i>
+        </div>
+
+        <div class="skills_singularskill">
+          <div class="progress progress-bar-vertical">
+            <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="height: 30%;">
+              <span class="sr-only">30% Complete</span>
+            </div>
+          </div>
+          <i class="devicon devicon-gulp-plain"></i>
+        </div>
+
+        <div class="skills_singularskill">
+          <div class="progress progress-bar-vertical">
+            <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="height: 30%;">
+              <span class="sr-only">30% Complete</span>
+            </div>
+          </div>
+          <i class="devicon devicon-javascript-plain"></i>
+        </div>
+
+        <div class="skills_singularskill">
+          <div class="progress progress-bar-vertical">
+            <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="height: 30%;">
+              <span class="sr-only">30% Complete</span>
+            </div>
+          </div>
+          <i class="devicon devicon-jquery-plain"></i>
+        </div>
+
+        <div class="skills_singularskill">
+          <div class="progress progress-bar-vertical">
+            <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="height: 30%;">
+              <span class="sr-only">30% Complete</span>
+            </div>
+          </div>
+          <i class="devicon devicon-mysql-plain"></i>
+        </div>
+
+        <div class="skills_singularskill">
+          <div class="progress progress-bar-vertical">
+            <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="height: 30%;">
+              <span class="sr-only">30% Complete</span>
+            </div>
+          </div>
+          <i class="devicon devicon-photoshop-plain"></i>
+        </div>
+
+        <div class="skills_singularskill">
+          <div class="progress progress-bar-vertical">
+            <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="height: 30%;">
+              <span class="sr-only">30% Complete</span>
+            </div>
+          </div>
+          <i class="devicon devicon-sass-plain"></i>
+        </div>
+
+        <div class="skills_singularskill">
+          <div class="progress progress-bar-vertical">
+            <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="height: 30%;">
+              <span class="sr-only">30% Complete</span>
+            </div>
+          </div>
+          <i class="devicon devicon-illustrator-plain"></i>
+        </div>
+
+        <div class="skills_singularskill">
+          <div class="progress progress-bar-vertical">
+            <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="height: 30%;">
+              <span class="sr-only">30% Complete</span>
+            </div>
+          </div>
+          <i class="devicon devicon-atom-plain"></i>
+        </div>
+
+        <div class="skills_singularskill">
+          <div class="progress progress-bar-vertical">
+            <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="height: 30%;">
+              <span class="sr-only">30% Complete</span>
+            </div>
+          </div>
+          <i class="devicon devicon-bootstrap-plain"></i>
+        </div>
+
       </div>
+<!--
+      <div class="skills__logocontainer">
+        <i class="devicon-bootstrap-plain"></i>
+        <i class="devicon-bootstrap-plain"></i>
+        <i class="devicon-bootstrap-plain"></i>
+        <i class="devicon-bootstrap-plain"></i>
+        <i class="devicon-bootstrap-plain"></i>
+      </div> -->
+
 		</div>
 	</section>
 
