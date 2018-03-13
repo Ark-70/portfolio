@@ -16,23 +16,23 @@
 .progress-bar-vertical .progress-bar {
   width: 100%;
   height: 0;
-  -webkit-transition: height 0.6s ease;
-  -o-transition: height 0.6s ease;
-  transition: height 0.6s ease;
+  -webkit-transition: height 1.1s ease;
+  -o-transition: height 1.1s ease;
+  transition: height 1.1s ease;
 }
 
 .skills__logocontainer{
   display:flex;
   justify-content: space-around;
 }
-.devicon{
-  font-size:90px;
 
+.devicon{
+  font-size:6vw;
 }
 
 .skills_singularskill{
   display:flex;
   flex-direction: column;
   align-items: center;
-  transition:order 1s ease;
+  transition:order 5s ease;
 }
