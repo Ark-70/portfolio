@@ -22,6 +22,13 @@
     }
   }
 
+  $('.creations__liste .creations__projet').click(function(event){
+    //relie les clicks de la liste des creations aux projets correspondants dans l'accordeon
+    className = "."+this.className.split(" ").join(".");
+    $('.creations__accordeon '+className).click();
+  });
+
+
   $('.accordeon__titre').click(function(event){
     if(clickPossible) {
       clickPossible = false;

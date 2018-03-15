@@ -33,7 +33,16 @@ https://app.netlify.com/signup#_ga=2.154495422.728589584.1519897243-606316059.15
 	<section class="path">
 		<div class="container-fluid">
 			<h2><span class="underline">Mon parcours :</span></h2>
-			<p>Lorem ibsum</p>
+      <div class="carac__container">
+        <!-- <div class="carac__image">OUI</div> -->
+        <img class="carac__image" src="assets/img/profile.jpg" alt="">
+        <ul class="carac__txt">
+          <li><em>Modèle : </em> GAN356 Air U<small>ltimate</small> M<small>agnetic</small></li>
+          <li><em>Taille : </em>lorem</li>
+          <li><em>Poids : </em>lorem</li>
+          <li><em>Couleur : </em>lorem</li>
+        </ul>
+      </div>
 		</div>
 	</section>
 
@@ -64,14 +73,14 @@ https://app.netlify.com/signup#_ga=2.154495422.728589584.1519897243-606316059.15
         <p>À travers différents projets, j'ai pu améliorer certains aspects de mes compétences. Voici une liste non exhaustive des projets que j'ai pu réalisés :</p>
         <h4>Programmation :</h4>
         <ul class="creations__liste creations__liste--prog">
-          <li><span class="creations__projet creations__projet--speedup"><label for="speeduplink">SpeedUp</label></span> <em class="creations__langage">-Python puis Javascript</em></li>
-          <li><span class="creations__projet creations__projet--dmas">Draw me a Ship</span> <em class="creations__langage">-Python puis Java</em></li>
-          <li><span class="creations__projet creations__projet--master">Mastermind</span> <em class="creations__langage">-Javascript + ES6</em></li>
-          <li><span class="creations__projet creations__projet--day">A Normal Day</span> <em class="creations__langage">-Unity/C#</em></li>
+          <li><span class="creations__projet creations__projet--speedup" data-link="galimg">SpeedUp</span> <em class="creations__langage">-Python puis Javascript</em></li>
+          <li><span class="creations__projet creations__projet--dmas" data-link="speedup">Draw me a Ship</span> <em class="creations__langage">-Python puis Java</em></li>
+          <li><span class="creations__projet creations__projet--master" data-link="mastermind">Mastermind</span> <em class="creations__langage">-Javascript + ES6</em></li>
+          <li><span class="creations__projet creations__projet--day" data-link="normalday">A Normal Day</span> <em class="creations__langage">-Unity/C#</em></li>
         </ul>
         <h4>Développement web :</h4>
         <ul class="creations__liste creations__liste--dev">
-          <li><span class="creations__projet creations__projet--galimg">Galerie d'images éditable</span> <em class="creations__langage">-PhP + Laravel</em></li>
+          <li><span class="creations__projet creations__projet--galimg" data-link="galimg">Galerie d'images éditable</span> <em class="creations__langage">-PhP + Laravel</em></li>
           <li>Site vitrine promotionnel<em class="creations__langage">-Sass + Mobile First</em></li>
           <li>Ce portfolio ! <em class="creations__langage"></em></li>
           <li>Un petit peu de wordpress ne ferait pas de mal<em class="creations__langage"></em></li>
@@ -79,7 +88,7 @@ https://app.netlify.com/signup#_ga=2.154495422.728589584.1519897243-606316059.15
       </article>
 
       <article class="creations__accordeon">
-        <h4 class="accordeon__titre accordeon__titre--selected"><span class="creations__projet creations__projet--speedup">SpeedUp</span><a href=""><i class="fas-fa github"></i></a></h4>
+        <h4 class="accordeon__titre accordeon__titre--selected"><span class="creations__projet creations__projet--speedup" data-link="speed">SpeedUp</span><a href=""><i class="fas-fa github"></i></a></h4>
         <div class="accordeon__contentbox accordeon__contentbox--open">
           <div class="accordeon__desc">
             <p>Destiné à la base à l'apprentissage du clavier par les enfants, <span class="creations__projet creations__projet--speedup">SpeedUp</span> a été créé comme premier exercice de programmation lors de ma spécialité <abbr title="Informatique & Sciences du Numérique">ISN</abbr> au Bac. Il a été plus tard adapté et amélioré par mes soins pour pouvoir être joué directement dans le navigateur grâce à Javascript.</p>
