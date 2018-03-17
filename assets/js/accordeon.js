@@ -1,9 +1,15 @@
-// pas besoin de ready puisque on met déjà les scripts après le body donc -> autoexécutante
-(function($){ // on renomme notre paramêtre JQuery (donné à la fin du fichier) en $
+$(function(){ // on renomme notre paramêtre JQuery (donné à la fin du fichier) en $
 
   let animTime = 300;
   let clickPossible = true;
+  selectDefault();
   appliquerMaxHeightATous();
+
+  function selectDefault(){
+    $($('.creations__liste .creations__projet')[0]).addClass('creations__projet--selected');
+    $($('.accordeon__titre')[0]).addClass('accordeon__titre--selected');
+    $($('.accordeon__contentbox')[0]).addClass('accordeon__contentbox--open');
+  }
 
   function trouverAccordeonHauteurMax(){
     let maxTmp = 0;
@@ -37,12 +43,16 @@
       let hauteurDuContenu = $('.accordeon__desc').eq(indexDuTitreClicked).outerHeight();
       console.log(hauteurDuContenu);
       $('.accordeon__titre').removeClass('accordeon__titre--selected');
+      $('.creations__liste span').removeClass('creations__projet--selected');
+
+      // on applique la même classe dans la liste
       $(this).addClass('accordeon__titre--selected');
+      className = "."+$(this).find('span')[0].className.split(" ").join(".");
+      console.log($(this).find('span')[0]);
+      $('.creations__liste '+className).addClass('creations__projet--selected');
 
       // $('.accordeon__desc').stop().animate({ height: 0 }, animTime);
       $('.accordeon__contentbox').animate({ height: 0 }, animTime);
-      console.log($('.accordeon__contentbox'));
-      console.log($('.accordeon__contentbox').eq(indexDuTitreClicked));
       $('.accordeon__contentbox').eq(indexDuTitreClicked).stop().animate({ height: hauteurDuContenu }, animTime);
       // stop() permet de superposer les animations de Collapse de l'un et de Expand de l'autre en faisant croire que les animations précédentes sont terminées
 
@@ -51,4 +61,4 @@
 
   });
 
-})(jQuery); // empêche les conflits entre différents $ si jamais un ajoute des bibliothèques
+}); // empêche les conflits entre différents $ si jamais un ajoute des bibliothèques

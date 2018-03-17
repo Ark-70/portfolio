@@ -11,16 +11,29 @@
     font-family:asgalt;
     src: url('../asgaltregular.ttf');
 }
+@font-face {
+    font-family:montserrat;
+    src: url(https://fonts.gstatic.com/s/montserrat/v10/IVeH6A3MiFyaSEiudUMXE4o3ZslTYfJv0R05CazkwN8.woff) format('woff');
+}
 html{
-	font-family: Quando;
-  /*font-family: "Merriweather", Georgia, serif;*/
+	/* font-family: Quando; */
+  /* font-family: "Merriweather", Georgia, serif; */
 	font-weight:200;
   font-size:62.5%;
 }
 
 body{
+  /* text-shadow: */
+  font-size:1.7rem;
+  font-family: montserrat;
+  /* font-weight:600; */
 	/*background-color:grey;*/
 	/*background-color:#3B3B3B;*/
+}
+
+strong, span.underline, span.creations__projet{
+  font-family: Quando;
+
 }
 
 header{
@@ -39,7 +52,6 @@ h2{
 }
 
 p, li{
-  font-size:1.6rem;
 }
 
 .header__backgroundimg{

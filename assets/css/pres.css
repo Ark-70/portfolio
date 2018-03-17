@@ -21,7 +21,7 @@
 .profile__image {
   display: block;
   /* met dans la même zone d'effet de z-index */
-  width: 15vw;
+  width: 18vw;
   max-width: 250px;
   max-height: 100%;
   position: relative;
@@ -38,7 +38,7 @@
   position: absolute;
   left: 50%;
   top: 50%;
-  width:95%;
+  width:85%;
   transform: translateX(-50%) translateY(-50%);
   padding: 0;
   /* opacity:0; */

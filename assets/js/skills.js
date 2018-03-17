@@ -1,4 +1,4 @@
-(function($){
+$(function(){
   // $( ".creations__accordeon" ).accordion();
 
   // let skills = [];
@@ -13,40 +13,19 @@
 
 // LA PUISSANCE D'ES6 EN UNE LIGNE : arrow function + si visible -> expand, sinon -> retract
   window.onscroll = () => {
-    // console.log(checkVisible($triggerSkills[0]));
-    animExpandSkills(checkVisible($triggerSkills[0])); //les jauges montent/descendent selon si elles sont visibles
     if(notSortedYet && checkVisible($triggerSkills[0])){
       sortSkillsWithCssOrder();
       notSortedYet = false;
     }
+    animExpandSkills(checkVisible($triggerSkills[0])); //les jauges montent/descendent selon si elles sont visibles
   }
 
+  window.onscroll();
 
 /***************FUNCTIONS****************/
-  function shuffle(tab) {
-    for (let i = tab.length - 1; i > 0; i--) {
-      let j = Math.floor(Math.random() * (i + 1));
-      tmp = tab[i];
-      tab[i] = tab[j];
-      tab[j] = tmp;
-    }
-  }
-
-  function giveSingleSkillHtml(skillStr, percentage = 30){
-    let html = ''+
-      '<div class="skills_singularskill">'+
-        '<div class="progress progress-vertical">'+
-          '<div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="'+percentage+'" aria-valuemin="0" aria-valuemax="100">'+
-            '<span class="sr-only">'+percentage+'% Complete</span>'+
-          '</div>'+
-        '</div>'+
-        '<i class="devicon devicon-'+skillStr+'-plain"></i>'+
-      '</div>';
-    return html;
-  }
 
   function renderSkillsSection(){
-    shuffle(skills);
+    // shuffle(skills);
     for (skill of skills){
       // $('.skills__barscontainer').append(giveSingleSkillHtml(skill[0],skill[1]));
       // console.log($('.devicon-'+skill[0]+'-plain'));
@@ -84,19 +63,14 @@
 
   function checkVisible(elm) {
     let rect = elm.getBoundingClientRect();
-    console.log(document.documentElement.clientHeight);
-    console.log(window.innerHeight);
     // let viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
     viewHeight = window.innerHeight;
     rectquart = (rect.top+rect.bottom)/4;
     rectcenter = (rect.top+rect.bottom)/2;
-    console.log("hauteur "+viewHeight);
-    console.log("center "+rectcenter);
-    console.log("bas "+rectquart);
     //retourne true tant que le centre OU le bas de l'élément est visible
     // return !(rect.bottom < 0 || rectcenter > viewHeight);
     return !(rectquart < 0 || rectcenter > viewHeight);
   }
 
 
-})(jQuery);
+});

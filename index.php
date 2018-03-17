@@ -24,6 +24,11 @@ https://app.netlify.com/signup#_ga=2.154495422.728589584.1519897243-606316059.15
   <link rel="stylesheet" href="assets/css/skills.css">
   <link rel="stylesheet" href="assets/css/style.css">
 
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" defer></script>
+  <script type="text/javascript" src="assets/js/matter.min.js" defer></script>
+  <script type="text/javascript" src="assets/js/skills.js" defer></script>
+  <script type="text/javascript" src="assets/js/accordeon.js" defer></script>
+
 </head>
 <body>
 	<header>
@@ -36,15 +41,15 @@ https://app.netlify.com/signup#_ga=2.154495422.728589584.1519897243-606316059.15
 
 	<section class="parcours">
 		<div class="container-fluid">
-			<h2><span class="underline">Mon parcours :</span></h2>
+			<h2><span class="underline">Présentation :</span></h2>
       <div class="profile__container">
         <div class="profile__centeredcontainer">
           <img class="profile__image" src="assets/img/profile.jpg" alt="">
           <ul class="profile__txt">
             <li><strong>Status : </strong>Étudiant Bac +2</li>
             <li><strong>Âge : </strong>19 ans</li>
-            <li><strong> : </strong></li>
-            <li><strong>Couleur : </strong></li>
+            <li><strong>Domaine : </strong>Programmation & Développement web</li>
+            <li><strong>Loisirs : </strong>Rubik's Cube & Musculation</li>
           </ul>
         </div>
       </div>
@@ -54,19 +59,18 @@ https://app.netlify.com/signup#_ga=2.154495422.728589584.1519897243-606316059.15
 	<section class="skills">
 		<div class="container-fluid">
 			<h2><span class="underline">Mes compétences :</span></h2>
-
       <div class="skills__barscontainer">
 
         <?php
           foreach ($skills as $skill) {
         ?>
-          <div class="skills_singularskill">
+          <div data-toggle="tooltip" title="<?php echo $skill[0] ?>" class="skills_singularskill">
             <div class="progress progress-vertical">
               <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="<?php echo $skill[1]?>" aria-valuemin="0" aria-valuemax="100">
                 <span class="sr-only"><?php echo $skill[1] ?>% Complete</span>
               </div>
             </div>
-            <i class="devicon devicon-<?php echo $skill[0] ?>-plain"></i>
+            <i alt="logo <?php echo $skill[0] ?>" class="devicon devicon-<?php echo $skill[0] ?>-plain"></i>
           </div>
         <?php
           }
@@ -83,72 +87,57 @@ https://app.netlify.com/signup#_ga=2.154495422.728589584.1519897243-606316059.15
         <p>À travers différents projets, j'ai pu améliorer certains aspects de mes compétences. Voici une liste non exhaustive des projets que j'ai pu réalisés :</p>
         <h4><span class="underline">Programmation :</span></h4>
         <ul class="creations__liste creations__liste--prog">
-          <li><span class="creations__projet creations__projet--speedup">SpeedUp</span> <em class="creations__langage">-Python puis Javascript</em></li>
-          <li><span class="creations__projet creations__projet--dmas">Draw me a Ship</span> <em class="creations__langage">-Python puis Java</em></li>
-          <li><span class="creations__projet creations__projet--master">Mastermind</span> <em class="creations__langage">-Javascript + ES6</em></li>
-          <li><span class="creations__projet creations__projet--day">A Normal Day</span> <em class="creations__langage">-Unity/C#</em></li>
+          <?php
+          foreach ($progReal as $key => $real) {
+          ?>
+            <li>
+              <span class="creations__projet creations__projet--<?php echo $key ?>"><?php echo $real['titre'] ?></span> <em class="creations__langage"><?php echo $real['langage'] ?></em>
+            </li>
+          <?php
+          }
+          ?>
         </ul>
         <h4><span class="underline">Développement web :</span></h4>
         <ul class="creations__liste creations__liste--dev">
-          <li><span class="creations__projet creations__projet--galimg">Galerie d'images éditable</span> <em class="creations__langage">-PhP + Laravel</em></li>
-          <li><span class="creations__projet creations__projet--choco">Site vitrine chocolaterie</span> <em class="creations__langage"></em></li>
-          <li><span class="creations__projet creations__projet--gans">Site vitrine mobile first</span> <em class="creations__langage">-Sass + Mobile First</em></li>
-          <li>Ce portfolio ! <em class="creations__langage"></em></li>
-          <li>Un petit peu de wordpress ne ferait pas de mal<em class="creations__langage"></em></li>
+          <?php
+          foreach ($devReal as $key => $real) {
+          ?>
+            <li>
+              <span class="creations__projet creations__projet--<?php echo $key ?>"><?php echo $real['titre'] ?></span> <em class="creations__langage"><?php echo $real['langage'] ?></em>
+            </li>
+          <?php
+          }
+          ?>
         </ul>
+        <h4><span class="underline">Infographie :</span></h4>
+        <ul class="creations__liste creations__liste--dev">
+          <?php
+          foreach ($infogReal as $key => $real) {
+          ?>
+            <li>
+              <span class="creations__projet creations__projet--<?php echo $key ?>"><?php echo $real['titre'] ?></span> <em class="creations__langage"><?php echo $real['langage'] ?></em>
+            </li>
+          <?php
+          }
+          ?>
+        </lu>
       </article>
 
       <article class="creations__accordeon">
-        <h4 class="accordeon__titre accordeon__titre--selected"><span class="creations__projet creations__projet--speedup">SpeedUp</span><a href=""><i class="fas-fa github"></i></a></h4>
-        <div class="accordeon__contentbox accordeon__contentbox--open">
-          <div class="accordeon__desc">
-            <p>Destiné à la base à l'apprentissage du clavier par les enfants, <span class="creations__projet creations__projet--speedup">SpeedUp</span> a été créé comme premier exercice de programmation lors de ma spécialité <abbr title="Informatique & Sciences du Numérique">ISN</abbr> au Bac. Il a été plus tard adapté et amélioré par mes soins pour pouvoir être joué directement dans le navigateur grâce à Javascript.</p>
-            <a href="dtraparic.mmi-angouleme.com/speedup.html">Jouer ici</a>
+        <?php foreach ($allReal as $idReal => $real) { ?>
+          <h4 class="accordeon__titre"><span class="creations__projet creations__projet--<?php echo $idReal ?>"><?php echo $real['titre'] ?></span></h4>
+          <div class="accordeon__contentbox">
+            <div class="accordeon__desc">
+              <?php echo $real['texte'] ?>
+            </div>
           </div>
-        </div>
-        <h4 class="accordeon__titre"><span class="creations__projet creations__projet--dmas">Draw me a Ship</span></h4>
-        <div class="accordeon__contentbox">
-          <div class="accordeon__desc">
-            <p><span class="creations__projet creations__projet--dmas">Draw me a Ship</span> a été le jeu créé pour la présentation du projet final d'<abbr title="Informatique & Sciences du Numérique">ISN</abbr> qui a reçu la note de 20 à l'épreuve du Bac. Dans ce jeu de Shoot Them Up, vous incarnez un vaisseau qui doit traverser des champs d'astéroides de plus en plus denses à l'aide de votre laser. Un système de monnaie et d'améliorations de votre vaisseau est présent pour vous aider.
-            C'est avec ce projet que je me suis initié à la programmation orientée objet.</p>
-          </div>
-        </div>
-        <h4 class="accordeon__titre"><span class="creations__projet creations__projet--master">Mastermind</span></h4>
-        <div class="accordeon__contentbox">
-          <div class="accordeon__desc">
-            <p>Ce <span class="creations__projet creations__projet--master">mastermind</span> était un exercice de mon DUT MMI pour nous initier au Javascript. J'ai pu avec ce jeu m'entraîner sur différents aspects du Javascript comme <abbr title="Ensemble de nouvelles manières d'écriture Javascript facilitant sa lecture et son écriture">ES6</abbr> et les modules.</p>
-          </div>
-        </div>
-        <h4 class="accordeon__titre"><span class="creations__projet creations__projet--galimg">Galerie d'images éditable</span></h4>
-        <div class="accordeon__contentbox">
-          <div class="accordeon__desc">
-            <p>Cet exercice de synthèse sur le PhP permettait de prouver ses acquis sur l'organisation en <abbr title="Modèle-Vue-Controlleur : séparation des parties du code selon leurs finalités">MVC</abbr>, ainsi que l'utilisation d'outils PhP comme le package manager <cite>Composer</cite> et des bibliothèques de <cite>Laravel</cite> comme le moteur de templates <cite>Blade</cite></p>
-          </div>
-        </div>
-        <h4 class="accordeon__titre"><span class="creations__projet creations__projet--choco">Site vitrine chocolaterie</span></h4>
-        <div class="accordeon__contentbox">
-          <div class="accordeon__desc">
-            <p>Cet exercice de synthèse sur le PhP permettait de prouver ses acquis sur l'organisation en <abbr title="Modèle-Vue-Controlleur : séparation des parties du code selon leurs finalités">MVC</abbr>, ainsi que l'utilisation d'outils PhP comme le package manager <cite>Composer</cite> et des bibliothèques de <cite>Laravel</cite> comme le moteur de templates <cite>Blade</cite></p>
-          </div>
-        </div>
-        <h4 class="accordeon__titre"><span class="creations__projet creations__projet--gans">Site vitrine mobile first</span></h4>
-        <div class="accordeon__contentbox">
-          <div class="accordeon__desc">
-            <p>Cet exercice de synthèse sur le PhP permettait de prouver ses acquis sur l'organisation en <abbr title="Modèle-Vue-Controlleur : séparation des parties du code selon leurs finalités">MVC</abbr>, ainsi que l'utilisation d'outils PhP comme le package manager <cite>Composer</cite> et des bibliothèques de <cite>Laravel</cite> comme le moteur de templates <cite>Blade</cite></p>
-          </div>
-        </div>
+        <?php } ?>
       </div>
 
 		</div>
 	</section>
 
 
-	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <!-- <script type="text/javascript" src="assets/js/accordion.js"></script> -->
-  <!-- voir depuis inspecteur de code s'il y a pas moyen de pécho le code CSS et JS utile -->
-	<script type="text/javascript" src="assets/js/matter.min.js"></script>
-  <script type="text/javascript" src="assets/js/accordeon.js"></script>
-  <script type="text/javascript" src="assets/js/skills.js"></script>
 
 	<!-- <script src="assets/js/sketch.js"></script> -->
 </body>
