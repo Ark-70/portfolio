@@ -1,30 +1,41 @@
 (function($){
   // $( ".creations__accordeon" ).accordion();
 
-  let skills = [
-    ["git",30,"#F05134"], ["php",60,"#767BB3"], ["css3",50,"#3E95D8"], ["html5",60,"#EF6527"], ["gulp",30,"#CE4646"], ["javascript",70,"#F0DA50"], ["jquery",90,"#1068AD"],
-    ["mysql",65,"#00618A"], ["photoshop",30,"#91C4FD"], ["illustrator",40,"#FF7C00"], ["sass",40,"#CC6699"], ["atom",50,"#66595C"], ["bootstrap",30,"#61408D"]
-  ];
+  // let skills = [];
+  let notSortedYet = true;
   let $triggerSkills = $('.skills__barscontainer');
-
+  // console.log($triggerSkills);
 
 /******************START******************/
-  renderSkills();
+  renderSkillsSection();
 
 /*****************EVENTS******************/
 
 // LA PUISSANCE D'ES6 EN UNE LIGNE : arrow function + si visible -> expand, sinon -> retract
   window.onscroll = () => {
-    animExpandSkills(checkVisible($triggerSkills[0]));
-    if(checkVisible($triggerSkills[0])) sortSkillsWithCssOrder();
+    // console.log(checkVisible($triggerSkills[0]));
+    animExpandSkills(checkVisible($triggerSkills[0])); //les jauges montent/descendent selon si elles sont visibles
+    if(notSortedYet && checkVisible($triggerSkills[0])){
+      sortSkillsWithCssOrder();
+      notSortedYet = false;
+    }
   }
 
 
 /***************FUNCTIONS****************/
+  function shuffle(tab) {
+    for (let i = tab.length - 1; i > 0; i--) {
+      let j = Math.floor(Math.random() * (i + 1));
+      tmp = tab[i];
+      tab[i] = tab[j];
+      tab[j] = tmp;
+    }
+  }
+
   function giveSingleSkillHtml(skillStr, percentage = 30){
     let html = ''+
       '<div class="skills_singularskill">'+
-        '<div class="progress progress-bar-vertical">'+
+        '<div class="progress progress-vertical">'+
           '<div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="'+percentage+'" aria-valuemin="0" aria-valuemax="100">'+
             '<span class="sr-only">'+percentage+'% Complete</span>'+
           '</div>'+
@@ -34,9 +45,11 @@
     return html;
   }
 
-  function renderSkills(){
+  function renderSkillsSection(){
+    shuffle(skills);
     for (skill of skills){
-      $('.skills__barscontainer').append(giveSingleSkillHtml(skill[0],skill[1]));
+      // $('.skills__barscontainer').append(giveSingleSkillHtml(skill[0],skill[1]));
+      // console.log($('.devicon-'+skill[0]+'-plain'));
       $('.devicon-'+skill[0]+'-plain').css("color",skill[2]);
       $('.devicon-'+skill[0]+'-plain').parent().find(".progress-bar").css("background-color",skill[2]);
 
@@ -44,7 +57,7 @@
     // sortSkillsWithCssOrder();
   }
 
-  function sortSkillsWithCssOrder(){ //devrait faire avec une transition
+  function sortSkillsWithCssOrder(){ //devrait faire avec une transition en les ordonnant
     let sortedSkills = skills.slice(); //creer une copie
     sortedSkills.sort(function(a, b){return b[1]-a[1]}); //on tri par leur chiffre
     for(skill of skills){
@@ -71,8 +84,18 @@
 
   function checkVisible(elm) {
     let rect = elm.getBoundingClientRect();
-    let viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
-    return !(rect.bottom < 0 || rect.top - viewHeight >= 0);
+    console.log(document.documentElement.clientHeight);
+    console.log(window.innerHeight);
+    // let viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
+    viewHeight = window.innerHeight;
+    rectquart = (rect.top+rect.bottom)/4;
+    rectcenter = (rect.top+rect.bottom)/2;
+    console.log("hauteur "+viewHeight);
+    console.log("center "+rectcenter);
+    console.log("bas "+rectquart);
+    //retourne true tant que le centre OU le bas de l'élément est visible
+    // return !(rect.bottom < 0 || rectcenter > viewHeight);
+    return !(rectquart < 0 || rectcenter > viewHeight);
   }
 
 

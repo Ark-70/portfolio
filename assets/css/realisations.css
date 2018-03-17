@@ -78,6 +78,14 @@
   color:#47ca4f;
   font-weight:bold;
 }
+.creations__projet--choco{
+  color:#8f634a;
+  font-weight:bold;
+}
+.creations__projet--gans{
+  color:#fafb59;
+  font-weight:bold;
+}
 .creations__langage{
   color:grey;
 }

@@ -4,7 +4,7 @@
   justify-content: space-around;
 }
 
-.progress-bar-vertical {
+.progress-vertical {
   width: 20px;
   min-height: 300px;
   display: flex;
@@ -13,12 +13,12 @@
   float: left;
 }
 
-.progress-bar-vertical .progress-bar {
+.progress-vertical .progress-bar {
   width: 100%;
   height: 0;
-  -webkit-transition: height 1.1s ease;
-  -o-transition: height 1.1s ease;
-  transition: height 1.1s ease;
+  -webkit-transition: height 1.3s ease;
+  -o-transition: height 1.3s ease;
+  transition: height 1.3s ease;
 }
 
 .skills__logocontainer{
