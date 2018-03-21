@@ -1,7 +1,8 @@
-$(function(){ // on renomme notre paramêtre JQuery (donné à la fin du fichier) en $
+$(function(){
 
   let animTime = 300;
   let clickPossible = true;
+  let currentActiveReal = null;
   selectDefault();
   appliquerMaxHeightATous();
 
@@ -39,19 +40,22 @@ $(function(){ // on renomme notre paramêtre JQuery (donné à la fin du fichier
     if(clickPossible) {
       clickPossible = false;
       let indexDuTitreClicked = $(this).index('.accordeon__titre');
-      console.log(indexDuTitreClicked);
       let hauteurDuContenu = $('.accordeon__desc').eq(indexDuTitreClicked).outerHeight();
-      console.log(hauteurDuContenu);
+      // on enlève les class de selected déjà existantes avant de les actualiser
       $('.accordeon__titre').removeClass('accordeon__titre--selected');
       $('.creations__liste span').removeClass('creations__projet--selected');
 
       // on applique la même classe dans la liste
       $(this).addClass('accordeon__titre--selected');
       className = "."+$(this).find('span')[0].className.split(" ").join(".");
-      console.log($(this).find('span')[0]);
+      // on actualise la variable & le fond d'écran du site en fonction
+
+      currentActiveReal = className.split("--")[1];
+      $('main').removeClass();
+      $('main').addClass('real__active--'+currentActiveReal);
+
       $('.creations__liste '+className).addClass('creations__projet--selected');
 
-      // $('.accordeon__desc').stop().animate({ height: 0 }, animTime);
       $('.accordeon__contentbox').animate({ height: 0 }, animTime);
       $('.accordeon__contentbox').eq(indexDuTitreClicked).stop().animate({ height: hauteurDuContenu }, animTime);
       // stop() permet de superposer les animations de Collapse de l'un et de Expand de l'autre en faisant croire que les animations précédentes sont terminées
@@ -61,4 +65,4 @@ $(function(){ // on renomme notre paramêtre JQuery (donné à la fin du fichier
 
   });
 
-}); // empêche les conflits entre différents $ si jamais un ajoute des bibliothèques
+});

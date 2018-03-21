@@ -77,10 +77,6 @@ header h1{
 	width:100%;
 }
 
-section{
-	color:white;
-}
-
 .container-fluid{
   padding:20px;
 }
@@ -117,17 +113,41 @@ section{
 	/*background-image: url(../background.png);*/
 
 	/*padding: 30px 0;*/
-
+  background-color: transparent;
+  color:white;
   display:flex;
   justify-content: center;
 }
 
+main{
+
+}
+
+.real__active{
+  background-attachment: fixed;
+  background-position: top;
+  background-size: cover;
+}
+
+.real__active--speedup{background: url(../img/screens/speedup.png) fixed top; background-size:cover; }
+.real__active--dmas{background: url(../img/screens/dmas.png) fixed top; background-size:cover; }
+.real__active--master{background: url(../img/screens/master.png) fixed top; background-size:cover; }
+.real__active--day{background: url(../img/screens/day.png) fixed top; background-size:cover; }
+.real__active--galimg{background: url(../img/screens/galimg.png) fixed top; background-size:cover; }
+.real__active--choco{background: url(../img/screens/choco.png) fixed top; background-size:cover; }
+.real__active--gans{background: url(../img/screens/gans.png) fixed top; background-size:cover; }
+
+section{
+
+}
+
 section:before{
   content:"";
-  z-index: -1;
-  position: absolute;
+  position:absolute;
   height:100%;
   width:100%;
+  z-index:-1;
+  /* background-attachment: fixed; */
 	background-image: url(../background.png);
   filter: brightness(85%);
   /* filter: brightness(20%); */
