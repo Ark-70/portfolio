@@ -53,6 +53,7 @@
 .creations__projet{
   text-shadow: 0.15em 0.15em 0.07em rgba(0,0,0,0.7);
   cursor:pointer;
+  border:0;
 }
 .creations__projet:hover{
   text-decoration: underline;

@@ -28,6 +28,7 @@ https://app.netlify.com/signup#_ga=2.154495422.728589584.1519897243-606316059.15
   <script type="text/javascript" src="assets/js/matter.min.js" defer></script>
   <script type="text/javascript" src="assets/js/skills.js" defer></script>
   <script type="text/javascript" src="assets/js/accordeon.js" defer></script>
+  <script type="text/javascript" src="assets/js/preloader.js" defer></script>
 
 </head>
 <body>
@@ -137,7 +138,6 @@ https://app.netlify.com/signup#_ga=2.154495422.728589584.1519897243-606316059.15
   		</div>
   	</section>
   </main>
-
 
 	<!-- <script src="assets/js/sketch.js"></script> -->
 </body>

@@ -58,7 +58,7 @@ p, li{
   height:100%;
   width:100%;
   position:absolute;
-  background-image: url(../background.png);
+  background-image: url(../img/motif.png);
   filter: brightness(23%);
   z-index:0;
 }
@@ -110,7 +110,6 @@ header h1{
 }
 
 section{
-	/*background-image: url(../background.png);*/
 
 	/*padding: 30px 0;*/
   background-color: transparent;
@@ -119,16 +118,18 @@ section{
   justify-content: center;
 }
 
-main{
-
-}
-
 .real__active{
   background-attachment: fixed;
   background-position: top;
   background-size: cover;
 }
 
+/*par défaut*/
+main{
+background: url(../img/motifdarkcinquo.png) fixed top; 
+transition: background 1s;
+}
+/*sinon, si existant*/
 .real__active--speedup{background: url(../img/screens/speedup.png) fixed top; background-size:cover; }
 .real__active--dmas{background: url(../img/screens/dmas.png) fixed top; background-size:cover; }
 .real__active--master{background: url(../img/screens/master.png) fixed top; background-size:cover; }
@@ -137,25 +138,21 @@ main{
 .real__active--choco{background: url(../img/screens/choco.png) fixed top; background-size:cover; }
 .real__active--gans{background: url(../img/screens/gans.png) fixed top; background-size:cover; }
 
-section{
-
-}
-
 section:before{
-  content:"";
-  position:absolute;
-  height:100%;
-  width:100%;
-  z-index:-1;
+  /* content:""; */
+  /* position:absolute; */
+  /* height:100%; */
+  /* width:100%; */
+  /* z-index:-1; */
   /* background-attachment: fixed; */
-	background-image: url(../background.png);
-  filter: brightness(85%);
+	/* background-image: url(../screens/motif.png); */
+  /* filter: brightness(85%); */
   /* filter: brightness(20%); */
 }
 
 section>.container-fluid{
-	width: 90%;
-  margin: 20px 0;
+	width: 85%;
+  margin: 30px 0;
   padding: 10px 10px;
 	/*padding: 0 15px;*/
   background:#3B3B3B;
