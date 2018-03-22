@@ -19,16 +19,15 @@ https://app.netlify.com/signup#_ga=2.154495422.728589584.1519897243-606316059.15
   <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
 
   <!-- <link rel="stylesheet" href="assets/css/accordion.css"> -->
-  <link rel="stylesheet" href="assets/css/pres.css">
-  <link rel="stylesheet" href="assets/css/realisations.css">
-  <link rel="stylesheet" href="assets/css/skills.css">
   <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/pres.css">
+  <link rel="stylesheet" href="assets/css/skills.css">
+  <link rel="stylesheet" href="assets/css/realisations.css">
 
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" defer></script>
   <script type="text/javascript" src="assets/js/matter.min.js" defer></script>
   <script type="text/javascript" src="assets/js/skills.js" defer></script>
   <script type="text/javascript" src="assets/js/accordeon.js" defer></script>
-  <script type="text/javascript" src="assets/js/preloader.js" defer></script>
 
 </head>
 <body>
