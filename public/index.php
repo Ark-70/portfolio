@@ -25,6 +25,16 @@ https://app.netlify.com/signup#_ga=2.154495422.728589584.1519897243-606316059.15
   <link rel="stylesheet" href="portfolio/assets/css/skills.css">
   <link rel="stylesheet" href="portfolio/assets/css/realisations.css">
 
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116312672-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-116312672-1');
+  </script>
+
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" defer></script>
   <script type="text/javascript" src="portfolio/assets/js/matter.min.js" defer></script>
   <script type="text/javascript" src="portfolio/assets/js/skills.js" defer></script>
