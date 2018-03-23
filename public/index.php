@@ -6,28 +6,29 @@ https://app.netlify.com/signup#_ga=2.154495422.728589584.1519897243-606316059.15
 
  -->
 
-<?php require 'datas.php'; ?>
+<?php require '../app_portfolio/datas.php'; ?>
 
 
 <!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>portfolio </title>
+  <meta name="description" content="Portfolio et présentation de David Traparic, étudiant en développement et programmation en 2e année de DUT MMI">
+  <title>Traparic David Portfolio | Étudiant DUT MMI Angoulême Développement et Programmation</title>
   <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
 
   <!-- <link rel="stylesheet" href="assets/css/accordion.css"> -->
-  <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="stylesheet" href="assets/css/pres.css">
-  <link rel="stylesheet" href="assets/css/skills.css">
-  <link rel="stylesheet" href="assets/css/realisations.css">
+  <link rel="stylesheet" href="portfolio/assets/css/style.css">
+  <link rel="stylesheet" href="portfolio/assets/css/pres.css">
+  <link rel="stylesheet" href="portfolio/assets/css/skills.css">
+  <link rel="stylesheet" href="portfolio/assets/css/realisations.css">
 
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" defer></script>
-  <script type="text/javascript" src="assets/js/matter.min.js" defer></script>
-  <script type="text/javascript" src="assets/js/skills.js" defer></script>
-  <script type="text/javascript" src="assets/js/accordeon.js" defer></script>
+  <script type="text/javascript" src="portfolio/assets/js/matter.min.js" defer></script>
+  <script type="text/javascript" src="portfolio/assets/js/skills.js" defer></script>
+  <script type="text/javascript" src="portfolio/assets/js/accordeon.js" defer></script>
 
 </head>
 <body>
@@ -44,7 +45,7 @@ https://app.netlify.com/signup#_ga=2.154495422.728589584.1519897243-606316059.15
   			<h2><span class="underline">Présentation :</span></h2>
         <div class="profile__container">
           <div class="profile__centeredcontainer">
-            <img class="profile__image" src="assets/img/profile.jpg" alt="">
+            <img class="profile__image" src="portfolio/assets/img/profile.jpg" alt="">
             <ul class="profile__txt">
               <li><strong>Status : </strong>Étudiant Bac +2</li>
               <li><strong>Âge : </strong>19 ans</li>
