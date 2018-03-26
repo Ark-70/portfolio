@@ -53,40 +53,35 @@
 .creations__projet{
   text-shadow: 0.15em 0.15em 0.07em rgba(0,0,0,0.7);
   cursor:pointer;
-  border:0;
+  font-weight:bold;
 }
 .creations__projet:hover{
   text-decoration: underline;
 }
+.accordeon__desc .creations__projet:hover{
+  text-decoration: none;
+  cursor:initial;
+}
+.creations__projet abbr[title]{
+  /* reset bootstrap */
+  border:0;
+}
 
-.creations__projet--speedup{
-  color:#329bc3;
-  font-weight:bold;
-}
-.creations__projet--dmas{
-  color:#C66F19;
-  font-weight:bold;
-}
-.creations__projet--master{
-  color:#ff3232;
-  font-weight:bold;
-}
-.creations__projet--day{
-  color:#FFB6C1;
-  font-weight:bold;
-}
-.creations__projet--galimg{
-  color:#47ca4f;
-  font-weight:bold;
-}
-.creations__projet--choco{
-  color:#8f634a;
-  font-weight:bold;
-}
-.creations__projet--gans{
-  color:#fafb59;
-  font-weight:bold;
-}
+.creations__projet--speedup {color:#329bc3;}
+.creations__projet--dmas    {color:#C66F19;}
+.creations__projet--master  {color:#ff3232;}
+.creations__projet--day     {color:#FFB6C1;}
+.creations__projet--galimg  {color:#47ca4f;}
+.creations__projet--choco   {color:#8f634a;}
+.creations__projet--gans    {color:#fafb59;}
+.creations__projet--hawaii  {color:#688302;}
+.creations__projet--piracy  {color:#ababab;}
 .creations__langage{
   color:grey;
+}
+
+@media screen and (max-width: 719px) {
+  .creations .creations__projet{
+
+  }
 }

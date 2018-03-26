@@ -4,6 +4,13 @@
   justify-content: space-around;
 }
 
+.skills__singularskill{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  transition:order 5s ease;
+}
+
 .progress-vertical {
   width: 20px;
   min-height: 300px;
@@ -27,12 +34,15 @@
 }
 
 .devicon{
-  font-size:5.9vw;
+  font-size:5.6vw;
 }
 
-.skills_singularskill{
-  display:flex;
-  flex-direction: column;
-  align-items: center;
-  transition:order 5s ease;
+@media screen and (max-width: 719px) {
+  /* on retire les 4 dernières compétences */
+  .mobileOptional{
+    display:none;
+  }
+  .devicon{
+    font-size:8.5vw;
+  }
 }

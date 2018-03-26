@@ -1,10 +1,18 @@
 $(function(){
 
+  //bonne taille de container desc calculée au init seulement
   let animTime = 300;
   let clickPossible = true;
   let currentActiveReal = null;
   selectDefault();
   appliquerMaxHeightATous();
+
+  $( window ).resize(function() {
+
+    selectDefault();
+    appliquerMaxHeightATous();
+
+  });
 
   function selectDefault(){
     $($('.creations__liste .creations__projet')[0]).addClass('creations__projet--selected');
@@ -52,7 +60,11 @@ $(function(){
 
       currentActiveReal = className.split("--")[1];
       $('main').removeClass();
-      $('main').addClass('real__active--'+currentActiveReal);
+
+      //Si on est sur mobile je n'active pas les background image
+      if (!window.matchMedia('(max-device-width: 719px)').matches) {
+        $('main').addClass('real__active--'+currentActiveReal);
+      }
 
       $('.creations__liste '+className).addClass('creations__projet--selected');
 
