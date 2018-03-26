@@ -18,7 +18,7 @@ https://app.netlify.com/signup#_ga=2.154495422.728589584.1519897243-606316059.15
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
 
-  <!-- <link rel="stylesheet" href="assets/css/accordion.css"> -->
+  <link rel="stylesheet" href="portfolio/assets/css/myfont-codes.css">
   <link rel="stylesheet" href="portfolio/assets/css/style.css">
   <link rel="stylesheet" href="portfolio/assets/css/pres.css">
   <link rel="stylesheet" href="portfolio/assets/css/skills.css">
@@ -39,27 +39,27 @@ https://app.netlify.com/signup#_ga=2.154495422.728589584.1519897243-606316059.15
 
 </head>
 <body>
+
   <header class="menu__container">
-    <a class="menu__togglebtn">O/X</a>
+    <a class="menu__togglebtn"><i class="icon icon-menu"></i></a>
       <nav class="menu">
         <ul>
-          <li><a href="#home">Présentation</a></li>
-          <li><a href="#about">Mes compétences</a></li>
-          <li><a href="#services">Mes réalisations</a></li>
+          <li><a href="#parcours">Présentation</a></li>
+          <li><a href="#skills">Mes compétences</a></li>
+          <li><a href="#creations">Mes réalisations</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
   </header>
-	<section class="imgdegarde">
 
+	<section class="imgdegarde">
 		<div class="garde__backgroundimg"></div>
 		<h1>David</h1>
 		<h1>Traparic</h1>
-		<!-- <canvas id="mattercanvas"></canvas> -->
 	</section>
 
   <main>
-  	<section class="parcours">
+  	<section id="parcours" class="parcours">
   		<div class="container-fluid">
   			<h2><span class="underline">Présentation :</span></h2>
         <div class="profile__container">
@@ -77,7 +77,7 @@ https://app.netlify.com/signup#_ga=2.154495422.728589584.1519897243-606316059.15
   		</div>
   	</section>
 
-  	<section class="skills">
+  	<section id="skills" class="skills">
   		<div class="container-fluid">
   			<h2><span class="underline">Mes compétences :</span></h2>
         <div class="skills__barscontainer">
@@ -101,11 +101,11 @@ https://app.netlify.com/signup#_ga=2.154495422.728589584.1519897243-606316059.15
   		</div>
   	</section>
 
-    <section class="qualites">
+    <section id="qualites" class="qualites">
 
     </section>
 
-  	<section class="creations">
+  	<section id="creations" class="creations">
   		<div class="container-fluid">
   			<article class="creations__listescontainer">
           <h2><span class="underline">Mes réalisations :</span></h2>

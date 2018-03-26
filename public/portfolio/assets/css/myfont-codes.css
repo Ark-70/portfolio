@@ -1,0 +1,14 @@
+.icon{
+  font-style: normal;
+  font-family:myfont;
+}
+.icon-mail:before { content: '\e800'; } /* '' */
+.icon-close:before { content: '\e803'; } /* '' */
+.icon-github-circled:before { content: '\f09b'; } /* '' */
+.icon-menu:before { content: '\f0c9'; } /* '' */
+.icon-mail-alt:before { content: '\f0e0'; } /* '' */
+.icon-linkedin:before { content: '\f0e1'; } /* '' */
+.icon-file-pdf:before { content: '\f1c1'; } /* '' */
+.icon-github-squared:before { content: '\f300'; } /* '' */
+.icon-twitter-squared:before { content: '\f304'; } /* '' */
+.icon-linkedin-squared:before { content: '\f30c'; } /* '' */

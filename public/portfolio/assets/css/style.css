@@ -4,6 +4,10 @@
     src: url('../asgaltregular.ttf');
 }
 @font-face {
+    font-family:myfont;
+    src: url('../myfont.woff') format('woff');
+}
+@font-face {
     font-family:montserrat;
     src: url(https://fonts.gstatic.com/s/montserrat/v10/IVeH6A3MiFyaSEiudUMXE4o3ZslTYfJv0R05CazkwN8.woff) format('woff');
 }
@@ -44,6 +48,8 @@ h2{
 }
 
 
+
+
 .menu__container{
   z-index:99;
   position:fixed;
@@ -52,20 +58,30 @@ h2{
   height:100vh;
   min-width:300px;
   background-color: #202020;
-}
-.menu__container--open{
+  transition: transform 0.5s ease;
   transform:translateX(-100%);
 }
-
+.menu__container--open{
+  transform:initial;
+}
 .menu__togglebtn{
   position: absolute;
-  top:50px;
-  right:0px;
+  top:40px;
+  right:-40px;
+  font-size:4rem;
+  padding:1rem;
+  border:1px solid #999;
+  padding:0.5rem 1.7rem;
   transform:translateX(100%);
-  width:50px;
-  height:50px;
+  transition: background-color 0.3s ease;
+  color:#999;
+  text-align: center;
 }
-
+.menu__togglebtn:hover{
+  color:#999;
+  background-color: rgba(255,255,255,0.1);
+  text-decoration: none;
+}
 .menu{
   height:75%;
   display:flex;
@@ -93,13 +109,6 @@ h2{
   text-decoration: none;
   color:#ddd;
 }
-
-
-
-
-
-
-
 
 
 
