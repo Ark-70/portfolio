@@ -25,7 +25,7 @@ https://app.netlify.com/signup#_ga=2.154495422.728589584.1519897243-606316059.15
   <link rel="stylesheet" href="portfolio/assets/css/realisations.css">
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116312672-1"></script>
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116312672-1"></script> -->
   <script type="text/javascript" defer>
   // on transfère les datas du datas.php au .js
   let skills = <?php echo json_encode($skills)?>,
@@ -35,15 +35,28 @@ https://app.netlify.com/signup#_ga=2.154495422.728589584.1519897243-606316059.15
   <script type="text/javascript" src="portfolio/assets/js/matter.min.js" defer></script>
   <script type="text/javascript" src="portfolio/assets/js/skills.js" defer></script>
   <script type="text/javascript" src="portfolio/assets/js/accordeon.js" defer></script>
+  <script type="text/javascript" src="portfolio/assets/js/menu.js" defer></script>
 
 </head>
 <body>
-	<header>
-		<div class="header__backgroundimg"></div>
+  <header class="menu__container">
+    <a class="menu__togglebtn">O/X</a>
+      <nav class="menu">
+        <ul>
+          <li><a href="#home">Présentation</a></li>
+          <li><a href="#about">Mes compétences</a></li>
+          <li><a href="#services">Mes réalisations</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+  </header>
+	<section class="imgdegarde">
+
+		<div class="garde__backgroundimg"></div>
 		<h1>David</h1>
 		<h1>Traparic</h1>
 		<!-- <canvas id="mattercanvas"></canvas> -->
-	</header>
+	</section>
 
   <main>
   	<section class="parcours">
@@ -88,13 +101,17 @@ https://app.netlify.com/signup#_ga=2.154495422.728589584.1519897243-606316059.15
   		</div>
   	</section>
 
+    <section class="qualites">
+
+    </section>
+
   	<section class="creations">
   		<div class="container-fluid">
   			<article class="creations__listescontainer">
           <h2><span class="underline">Mes réalisations :</span></h2>
           <p>À travers différents projets, j'ai pu améliorer certains aspects de mes compétences. Voici une liste non exhaustive des projets que j'ai pu réalisés :</p>
           <?php
-          foreach ($allReal as $DomainTitle => $reals):
+          foreach ($allReal["fr"] as $DomainTitle => $reals):
           ?>
             <h4><span class="underline"><?php echo $DomainTitle ?> :</span></h4>
             <ul class="creations__liste">
@@ -115,12 +132,14 @@ https://app.netlify.com/signup#_ga=2.154495422.728589584.1519897243-606316059.15
 
         <article class="creations__accordeon">
           <?php foreach ($allRealFlat as $idReal => $real) { ?>
-            <h4 class="accordeon__titre"><span class="creations__projet creations__projet--<?php echo $idReal ?>"><?php echo $real['titre'] ?></span></h4>
-            <div class="accordeon__contentbox">
-              <div class="accordeon__desc">
-                <?php echo $real['texte'] ?>
+            <div class="accordeon__singlecreation">
+              <h4 class="accordeon__titre"><span class="creations__projet creations__projet--<?php echo $idReal ?>"><?php echo $real['titre'] ?></span></h4>
+              <div class="accordeon__contentbox">
+                <div class="accordeon__desc">
+                  <?php echo $real['texte'] ?>
+                </div>
               </div>
-            </div>
+          </div>
           <?php } ?>
         </div>
 

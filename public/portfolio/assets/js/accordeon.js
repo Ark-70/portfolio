@@ -4,20 +4,28 @@ $(function(){
   let animTime = 300;
   let clickPossible = true;
   let currentActiveReal = null;
+  let $main = $('main');
+  let resizeCalculPossible = true;
   selectDefault();
   appliquerMaxHeightATous();
 
-  $( window ).resize(function() {
 
-    selectDefault();
-    appliquerMaxHeightATous();
+  //Je voulais que le calcul du MaxHeight se refasse à chaque resize de la page mais je n'ai pas réussi, il vous faudra donc faire F5 une fois la taille de la page modifiée
 
-  });
+  // $(window).resize(function() {
+  //   if (resizeCalculPossible){
+  //     resizeCalculPossible = false;
+  //     selectDefault();
+  //     resetAutoHeight();
+  //     appliquerMaxHeightATous();
+  //   }
+  // });
 
   function selectDefault(){
     $($('.creations__liste .creations__projet')[0]).addClass('creations__projet--selected');
     $($('.accordeon__titre')[0]).addClass('accordeon__titre--selected');
     $($('.accordeon__contentbox')[0]).addClass('accordeon__contentbox--open');
+    $('main').addClass('real__active--speedup');
   }
 
   function trouverAccordeonHauteurMax(){
@@ -25,15 +33,22 @@ $(function(){
     for (desc of $('.accordeon__desc')) {
       // dans cette forof loop, desc n'est plus un objet jQuery mais JS natif
       maxTmp = Math.max(maxTmp,$(desc).outerHeight());
+      console.log(desc,$(desc).outerHeight());
     }
-    console.log(maxTmp);
     return maxTmp;
+  }
+
+  function resetAutoHeight(){
+    for (desc of $('.accordeon__desc')) {
+      desc.style.height = "initial";
+    }
   }
 
   function appliquerMaxHeightATous(){
     for (desc of $('.accordeon__desc')){
       //puisque desc est objet js natif
       desc.style.height = trouverAccordeonHauteurMax()+"px";
+
     }
   }
 
@@ -59,11 +74,11 @@ $(function(){
       // on actualise la variable & le fond d'écran du site en fonction
 
       currentActiveReal = className.split("--")[1];
-      $('main').removeClass();
+      $main.removeClass();
 
       //Si on est sur mobile je n'active pas les background image
       if (!window.matchMedia('(max-device-width: 719px)').matches) {
-        $('main').addClass('real__active--'+currentActiveReal);
+        $main.addClass('real__active--'+currentActiveReal);
       }
 
       $('.creations__liste '+className).addClass('creations__projet--selected');
