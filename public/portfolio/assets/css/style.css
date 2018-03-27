@@ -66,7 +66,7 @@ h2{
 }
 .menu__togglebtn{
   position: absolute;
-  top:40px;
+  top:50px;
   right:-40px;
   font-size:4rem;
   padding:1rem;
@@ -74,12 +74,15 @@ h2{
   padding:0.5rem 1.7rem;
   transform:translateX(100%);
   transition: background-color 0.3s ease;
+  /* transition: color 0.3s ease; */
+  background-color: rgba(42,42,42,0.9);
   color:#999;
   text-align: center;
 }
 .menu__togglebtn:hover{
-  color:#999;
-  background-color: rgba(255,255,255,0.1);
+  /* color:#999; */
+  color:#ccc;
+  background-color: rgba(70,70,70,0.6);
   text-decoration: none;
 }
 .menu{
