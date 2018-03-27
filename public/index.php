@@ -33,9 +33,8 @@ https://app.netlify.com/signup#_ga=2.154495422.728589584.1519897243-606316059.15
   </script>
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" defer></script>
   <script type="text/javascript" src="portfolio/assets/js/matter.min.js" defer></script>
-  <script type="text/javascript" src="portfolio/assets/js/skills.js" defer></script>
+  <script type="text/javascript" src="portfolio/assets/js/scrollskillsandmenu.js" defer></script>
   <script type="text/javascript" src="portfolio/assets/js/accordeon.js" defer></script>
-  <script type="text/javascript" src="portfolio/assets/js/menu.js" defer></script>
 
 </head>
 <body>
@@ -108,12 +107,12 @@ https://app.netlify.com/signup#_ga=2.154495422.728589584.1519897243-606316059.15
   	<section id="creations" class="creations">
   		<div class="container-fluid">
   			<article class="creations__listescontainer">
-          <h2><span class="underline">Mes réalisations :</span></h2>
+          <h2 class="creations__titre"><span class="underline">Mes réalisations :</span></h2>
           <p>À travers différents projets, j'ai pu améliorer certains aspects de mes compétences. Voici une liste non exhaustive des projets que j'ai pu réalisés :</p>
           <?php
           foreach ($allReal["fr"] as $DomainTitle => $reals):
           ?>
-            <h4><span class="underline"><?php echo $DomainTitle ?> :</span></h4>
+            <h4 class="creations__soustitre"><span class="underline"><?php echo $DomainTitle ?> :</span></h4>
             <ul class="creations__liste">
             <?php
             foreach ($reals as $key => $real):

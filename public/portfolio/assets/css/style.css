@@ -59,7 +59,7 @@ h2{
   min-width:300px;
   background-color: #202020;
   transition: transform 0.5s ease;
-  transform:translateX(-100%);
+  transform: translateX(-100%);
 }
 .menu__container--open{
   transform:initial;
@@ -196,15 +196,15 @@ background: url(../img/motifdarkcinquo.png) fixed top;
 /* transition: background 1s; */
 }
 /*sinon, si existant*/
-.real__active--speedup{background: url(../img/screens/speedup.png) fixed top; background-size:cover; }
-.real__active--dmas{background: url(../img/screens/dmas.png) fixed top; background-size:cover; }
-.real__active--master{background: url(../img/screens/master.png) fixed top; background-size:cover; }
-.real__active--day{background: url(../img/screens/day.png) fixed top; background-size:cover; }
-.real__active--galimg{background: url(../img/screens/galimg.png) fixed top; background-size:cover; }
-.real__active--choco{background: url(../img/screens/choco.png) fixed top; background-size:cover; }
-.real__active--gans{background: url(../img/screens/gans.png) fixed center; background-size:cover; }
-.real__active--hawaii{background: url(../img/screens/hawaii.png) fixed center; background-size:cover; }
-.real__active--piracy{background: url(../img/screens/piracy.png) fixed center; background-repeat: no-repeat;}
+.real__active--speedup{  background: url(../img/screens/speedup.png) fixed top;    background-size:cover; }
+.real__active--dmas{     background: url(../img/screens/dmas.png)    fixed top;    background-size:cover; }
+.real__active--master{   background: url(../img/screens/master.png)  fixed top;    background-size:cover; }
+.real__active--day{      background: url(../img/screens/day.png)     fixed top;    background-size:cover; }
+.real__active--galimg{   background: url(../img/screens/galimg.png)  fixed top;    background-size:cover; }
+.real__active--choco{    background: url(../img/screens/choco.png)   fixed top;    background-size:cover; }
+.real__active--gans{     background: url(../img/screens/gans.png)    fixed center; background-size:cover; }
+.real__active--hawaii{   background: url(../img/screens/hawaii.png)  fixed center; background-size:cover; }
+.real__active--piracy{   background: url(../img/screens/piracy.png)  fixed center; background-repeat: no-repeat;}
 
 section:before{
   /* content:""; */
@@ -229,4 +229,17 @@ section>.container-fluid{
 }
 section:last-child>.container-fluid{
   margin-bottom:5vh;
+}
+
+
+
+@media screen and (max-width:719px){
+  section>.container-fluid{
+  	width: 100%;
+    margin:0;
+}
+@media screen and (max-width:559px){
+  header h1{
+    font-size:15rem;
+  }
 }

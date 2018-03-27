@@ -33,7 +33,7 @@ $(function(){
     for (desc of $('.accordeon__desc')) {
       // dans cette forof loop, desc n'est plus un objet jQuery mais JS natif
       maxTmp = Math.max(maxTmp,$(desc).outerHeight());
-      console.log(desc,$(desc).outerHeight());
+      // console.log(desc,$(desc).outerHeight());
     }
     return maxTmp;
   }

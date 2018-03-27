@@ -8,7 +8,6 @@ $(function(){
   });
 
   window.onscroll = function() {
-    console.log("bite");
     $('.menu__container').removeClass('menu__container--open');
     $('.menu__togglebtn').find('.icon').removeClass('icon-close');
     $('.menu__togglebtn').find('.icon').addClass('icon-menu');

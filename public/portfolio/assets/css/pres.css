@@ -10,10 +10,11 @@
   text-align: initial;
   margin: auto;
 }
-.profile__centeredcontainer:hover .profile__image {
+.profile__container:hover .profile__image {
+  /* pour être sur que l'utilisateur passe sa souris sur ma photo, je prends le container de 100% */
   transform: translateX(-10em);
 }
-.profile__centeredcontainer:hover .profile__txt {
+.profile__container:hover .profile__txt {
   transform: translateX(+5em) translateY(-50%);
   opacity:1;
 }
@@ -22,8 +23,8 @@
   display: block;
   /* met dans la même zone d'effet de z-index */
   width: 18vw;
-  max-width: 250px;
   max-height: 100%;
+  max-width: 280px;
   position: relative;
   border-radius:50%;
   border:5px solid var(--favcolor);
@@ -64,4 +65,16 @@
 .pres__important abbr[title]{
   /* reset bootstrap */
   border:0;
+}
+
+@media screen and (max-width:719px){
+  .profile__txt{
+    display:none;
+  }
+  .profile__container:hover .profile__image {
+    transform: none;
+  }
+  .profile__container:hover .profile__txt {
+    transform: none;
+  }
 }
