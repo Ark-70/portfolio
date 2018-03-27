@@ -14,8 +14,11 @@ $(function(){
   //toggle du menu
   $('.menu__togglebtn').click(function() {
     $('.menu__container').toggleClass('menu__container--open');
-    $(this).find('.icon').toggleClass('icon-menu');
-    $(this).find('.icon').toggleClass('icon-close');
+    $(this).toggleClass('menu__togglebtn--closed').find('.icon').toggleClass('icon-menu');
+    $(this).toggleClass('menu__togglebtn--opened').find('.icon').toggleClass('icon-close');
+    if (!window.matchMedia('(max-device-width: 559px)').matches) {
+      // $(this).addClass('.menu__togglebtn--intomenu');
+    }
   });
 
   // La arrow function (ES6) (raccourci de fonction anonyme)
@@ -23,8 +26,8 @@ $(function(){
   window.onscroll = () => {
     // On retire le menu si on scroll
     $('.menu__container').removeClass('menu__container--open');
-    $('.menu__togglebtn').find('.icon').removeClass('icon-close');
-    $('.menu__togglebtn').find('.icon').addClass('icon-menu');
+    $('.menu__togglebtn').removeClass('menu__togglebtn--opened').find('.icon').removeClass('icon-close');
+    $('.menu__togglebtn').toggleClass('menu__togglebtn--closed').find('.icon').addClass('icon-menu');
 
     //Si au scroll, les skills ne sont pas encore triés et qu'on les voit, on les trie
     if(notSortedYet && checkVisible($triggerSkills[0])){

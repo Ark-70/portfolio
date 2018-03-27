@@ -1,4 +1,4 @@
-.creations .container-fluid{
+.creations .section__container{
   display:flex;
   justify-content: space-between;
 }
@@ -99,7 +99,7 @@
   .creations__liste, .creations__soustitre{
     display:none;
   }
-  .creations .container-fluid{
+  .creations .section__container{
     flex-direction: column;
     align-items: center;
 

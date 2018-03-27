@@ -14,8 +14,9 @@
   /* pour être sur que l'utilisateur passe sa souris sur ma photo, je prends le container de 100% */
   transform: translateX(-10em);
 }
+
 .profile__container:hover .profile__txt {
-  transform: translateX(+5em) translateY(-50%);
+  transform: translateX(+10em) translateY(-50%);
   opacity:1;
 }
 
@@ -25,6 +26,8 @@
   width: 18vw;
   max-height: 100%;
   max-width: 280px;
+  min-width: 200px;
+  min-height: 200px;
   position: relative;
   border-radius:50%;
   border:5px solid var(--favcolor);
@@ -34,17 +37,35 @@
   transition: transform 1s;
 }
 
+.profile__mask{
+  position:absolute;
+  left:-75%;
+
+  /* même taille que l'image */
+  width: 20vw;
+  height: 100%;
+  max-width: 280px;
+  min-width: 200px;
+  min-height: 200px;
+  z-index:1;
+  /* même couleur que le fond */
+  background-color: #3b3b3b;
+}
+
 .profile__txt {
-  transition: transform 1s;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
   position: absolute;
-  left: 50%;
+  left:0;
   top: 50%;
-  width:85%;
+  width:150%;
+  height:100%;
   transform: translateX(-50%) translateY(-50%);
   padding: 0;
-  /* opacity:0; */
-
+  transition: transform 1s;
 }
+
 .profile__txt li {
   font-size: 1.6rem;
   list-style: none;
@@ -53,7 +74,7 @@
 
 .pres__txt{
   width:70%;
-  margin:auto;
+  margin:50px auto;
   text-align: justify;
 }
 
@@ -68,7 +89,10 @@
 }
 
 @media screen and (max-width:719px){
-  .profile__txt{
+  .pres__txt{
+    width:87%;
+  }
+  .profile__txt, .profile__mask{
     display:none;
   }
   .profile__container:hover .profile__image {

@@ -7,8 +7,9 @@ $(function(){
   let $main = $('main');
   let resizeCalculPossible = true;
   selectDefault();
-  appliquerMaxHeightATous();
-
+  if (!window.matchMedia('(max-device-width: 719px)').matches) {
+    appliquerMaxHeightATous();
+  }
 
   //Je voulais que le calcul du MaxHeight se refasse à chaque resize de la page mais je n'ai pas réussi, il vous faudra donc faire F5 une fois la taille de la page modifiée
 

@@ -32,14 +32,8 @@ strong, .underline, .creations__projet, .pres__important{
   font-family: Quando;
 }
 
-.imgdegarde{
-	height:100vh;
-	display:flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	/*background-color:#3B3B3B;*/
-  /*filter: brightness(-50%);*/
+p{
+  text-align: justify;
 }
 
 h2{
@@ -49,7 +43,7 @@ h2{
 
 
 
-
+/************************** MENU **************************/
 .menu__container{
   z-index:99;
   position:fixed;
@@ -66,18 +60,19 @@ h2{
 }
 .menu__togglebtn{
   position: absolute;
-  top:50px;
+  top:40px;
   right:-40px;
   font-size:4rem;
   padding:1rem;
   border:1px solid #999;
   padding:0.5rem 1.7rem;
   transform:translateX(100%);
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
   /* transition: color 0.3s ease; */
   background-color: rgba(42,42,42,0.9);
   color:#999;
   text-align: center;
+
 }
 .menu__togglebtn:hover{
   /* color:#999; */
@@ -121,9 +116,16 @@ h2{
 
 
 
-
-
-
+/************************** "PAGE" DE GARDE **************************/
+.imgdegarde{
+	height:100vh;
+	display:flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	/*background-color:#3B3B3B;*/
+  /*filter: brightness(-50%);*/
+}
 .garde__backgroundimg{
   height:100%;
   width:100%;
@@ -132,7 +134,6 @@ h2{
   filter: brightness(23%);
   z-index:0;
 }
-
 .imgdegarde h1{
 	line-height: 0.9em;
 	font-family: asgalt,sans-serif;
@@ -142,6 +143,9 @@ h2{
   z-index:2;
   text-shadow: 3px 3px 1px #888888;
 }
+
+
+
 
 #mattercanvas{
 	width:100%;
@@ -176,7 +180,6 @@ h2{
 }
 
 section{
-
 	/*padding: 30px 0;*/
   background-color: transparent;
   color:white;
@@ -206,19 +209,9 @@ background: url(../img/motifdarkcinquo.png) fixed top;
 .real__active--hawaii{   background: url(../img/screens/hawaii.png)  fixed center; background-size:cover; }
 .real__active--piracy{   background: url(../img/screens/piracy.png)  fixed center; background-repeat: no-repeat;}
 
-section:before{
-  /* content:""; */
-  /* position:absolute; */
-  /* height:100%; */
-  /* width:100%; */
-  /* z-index:-1; */
-  /* background-attachment: fixed; */
-	/* background-image: url(../screens/motif.png); */
-  /* filter: brightness(85%); */
-  /* filter: brightness(20%); */
-}
 
-section>.container-fluid{
+/*___Général : section___*/
+.section__container{
 	width: 85%;
   margin: 10vh 0 0;
   padding: 25px 10px;
@@ -227,19 +220,40 @@ section>.container-fluid{
   /* border-radius:4px; */
   border:10px solid #eee;
 }
-section:last-child>.container-fluid{
+section:last-of-type .section__container{
   margin-bottom:5vh;
 }
 
-
-
+/*___Mobile Queries___*/
 @media screen and (max-width:719px){
-  section>.container-fluid{
+  .section__container, section:last-of-type .section__container{
   	width: 100%;
     margin:0;
+  }
+  .menu__togglebtn{
+    top:25px;
+    right:-25px;
+    font-size:3.5rem;
+  }
 }
 @media screen and (max-width:559px){
-  header h1{
+  .imgdegarde h1{
     font-size:15rem;
+  }
+  .menu__container{
+    width:100vw;
+  }
+  .menu__togglebtn{
+    top:25px;
+    right:-25px;
+    line-height:0.7em;
+    padding:1rem 1.2rem;
+  }
+  .menu__togglebtn--opened{
+    right:25px;
+    transform:translateX(0);
+  }
+  .menu__togglebtn .icon{
+    font-size:3rem;
   }
 }

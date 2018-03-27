@@ -40,7 +40,7 @@ https://app.netlify.com/signup#_ga=2.154495422.728589584.1519897243-606316059.15
 <body>
 
   <header class="menu__container">
-    <a class="menu__togglebtn"><i class="icon icon-menu"></i></a>
+    <a class="menu__togglebtn menu__togglebtn--closed"><i class="icon icon-menu"></i></a>
       <nav class="menu">
         <ul>
           <li><a href="#parcours">Présentation</a></li>
@@ -59,10 +59,11 @@ https://app.netlify.com/signup#_ga=2.154495422.728589584.1519897243-606316059.15
 
   <main>
   	<section id="parcours" class="parcours">
-  		<div class="container-fluid">
+  		<div class="section__container">
   			<h2><span class="underline">Présentation :</span></h2>
         <div class="profile__container">
           <div class="profile__centeredcontainer">
+            <div class="profile__mask"></div>
             <img class="profile__image" src="portfolio/assets/img/profile.jpg" alt="">
             <ul class="profile__txt">
               <li><strong>Statut : </strong>Étudiant Bac +2</li>
@@ -77,7 +78,7 @@ https://app.netlify.com/signup#_ga=2.154495422.728589584.1519897243-606316059.15
   	</section>
 
   	<section id="skills" class="skills">
-  		<div class="container-fluid">
+  		<div class="section__container">
   			<h2><span class="underline">Mes compétences :</span></h2>
         <div class="skills__barscontainer">
 
@@ -105,7 +106,7 @@ https://app.netlify.com/signup#_ga=2.154495422.728589584.1519897243-606316059.15
     </section>
 
   	<section id="creations" class="creations">
-  		<div class="container-fluid">
+  		<div class="section__container">
   			<article class="creations__listescontainer">
           <h2 class="creations__titre"><span class="underline">Mes réalisations :</span></h2>
           <p>À travers différents projets, j'ai pu améliorer certains aspects de mes compétences. Voici une liste non exhaustive des projets que j'ai pu réalisés :</p>
