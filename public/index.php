@@ -12,6 +12,7 @@ https://app.netlify.com/signup#_ga=2.154495422.728589584.1519897243-606316059.15
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Portfolio et présentation de David Traparic, étudiant en développement et programmation en 2e année de DUT MMI">
   <meta name="google-site-verification" content="i5-PStLflHEPBHowRL6MStX7or38hI47kd3nO7kqtv0" />
   <title>Traparic David Portfolio | Étudiant DUT MMI Développement & Programmation</title>
