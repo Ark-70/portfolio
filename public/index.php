@@ -64,7 +64,7 @@ https://app.netlify.com/signup#_ga=2.154495422.728589584.1519897243-606316059.15
         <div class="profile__container">
           <div class="profile__centeredcontainer">
             <div class="profile__mask"></div>
-            <img class="profile__image" src="portfolio/assets/img/profile.jpg" alt="">
+            <img class="profile__image" srcset="portfolio/assets/img/profile236.jpg 236w, portfolio/assets/img/profile280.jpg 280w" src="portfolio/assets/img/profile280.jpg" width="280" height="280" alt="Photo David Traparic">
             <ul class="profile__txt">
               <li><strong>Statut : </strong>Étudiant Bac +2</li>
               <li><strong>Âge : </strong>19 ans</li>
