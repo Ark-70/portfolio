@@ -151,7 +151,7 @@ $Texts = [
       "title"=>"Présentation : ",
       "status"=>"<span class='pres__important'>Statut : </span>",
       "statusTxt"=>"Étudiant Bac +2",
-      "age"=>"<span class='pres__important'>Age : </span>",
+      "age"=>"<span class='pres__important'>Âge : </span>",
       "ageTxt"=>"19 ans",
       "dom"=>"<span class='pres__important'>Domaine : </span>",
       "domTxt"=>"Programmation & Développement web",
@@ -198,4 +198,4 @@ $Texts = [
   ]
 ];
 
-$allRealFlat = array_merge($allReal["fr"]["Programmation"], $allReal["fr"]["Développement web"], $allReal["fr"]["Infographie"]);
+$allRealFlat = array_merge($allReal[$lang]["Programmation"], $allReal[$lang]["Développement web"], $allReal[$lang]["Infographie"]);

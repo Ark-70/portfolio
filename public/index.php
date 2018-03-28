@@ -6,6 +6,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Portfolio et présentation de David Traparic, étudiant en développement et programmation en 2e année de DUT MMI">
+  <link rel="shortcut icon" href="portfolio/assets/img/favicon.png">
   <meta name="google-site-verification" content="i5-PStLflHEPBHowRL6MStX7or38hI47kd3nO7kqtv0" />
   <title><?php echo $Texts[$lang]["siteTitle"]; ?></title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -35,7 +36,7 @@
   <header class="menu__container">
     <a class="menu__togglebtn menu__togglebtn--closed"><i class="icon icon-menu"></i></a>
     <nav class="menu">
-      <div class="menu__logotitlecontainer">
+      <div class="menu__lecontainer">
         <!-- image vectorielle de mon logo inline comme ça sinon, on ne peut pas lui appliquer de style facilement -->
         <svg class="menu__logo" width="300" height="300" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
         	 viewBox="0 0 179.1 151.5" style="enable-background:new 0 0 179.1 151.5;" xml:space="preserve">
@@ -68,10 +69,10 @@
         <h4 class="titreportfolio titreportfolio--mini">David Traparic</h4>
       </div>
       <ul>
-        <a href="#parcours"><li><?php echo $Texts[$lang]["menu"]["pres"]; ?></li></a>
-        <a href="#skills"><li><?php echo $Texts[$lang]["menu"]["skills"]; ?></li></a>
-        <a href="#creations"><li><?php echo $Texts[$lang]["menu"]["real"]; ?></li></a>
-        <a class="mobileOptional" href="mailto:da.traparic@gmail.com"><li><?php echo $Texts[$lang]["menu"]["mail"]; ?></li></a>
+        <li><a href="#parcours"><?php echo $Texts[$lang]["menu"]["pres"]; ?></a></li>
+        <li><a href="#skills"><?php echo $Texts[$lang]["menu"]["skills"]; ?></a></li>
+        <li><a href="#creations"><?php echo $Texts[$lang]["menu"]["real"]; ?></a></li>
+        <li><a class="mobileOptional" href="mailto:da.traparic@gmail.com"><?php echo $Texts[$lang]["menu"]["mail"]; ?></a></li>
       </ul>
       <a href="portfolio/assets/CV_David_Traparic.pdf"><i class="menu__cv icon icon-file-pdf" title="télécharger le CV"></i></a>
         <div class="access">
@@ -152,7 +153,7 @@
           <h2 class="creations__titre"><span class="underline"><?php echo $Texts[$lang]["crea"]["title"]; ?></span></h2>
           <p><?php echo $Texts[$lang]["crea"]["intro"]; ?></p>
           <?php
-          foreach ($allReal["fr"] as $DomainTitle => $reals):
+          foreach ($allReal[$lang] as $DomainTitle => $reals):
           ?>
             <h4 class="creations__soustitre"><span class="underline"><?php echo $DomainTitle ?> :</span></h4>
             <ul class="creations__liste">

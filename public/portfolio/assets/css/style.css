@@ -150,6 +150,9 @@ h4{
   margin:1.8vh;
   transition:background-color 0.5s ease;
 }
+.menu li a{
+  padding:1.4vh;
+}
 .menu li:hover{
   background-color: #303030;
 }
