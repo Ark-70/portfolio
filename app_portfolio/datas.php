@@ -1,4 +1,9 @@
 <?php
+$lang = "fr"; //par défaut
+// var_dump($_POST);
+if (isset($_POST['lang'])) {
+  $lang = $_POST['lang'];
+}
 
 $skills = [
   //ID, %, Couleur, mobile
@@ -8,7 +13,6 @@ $skills = [
   [ "html5",        50,     "#EF6527", 1 ],
   [ "mysql",        45,     "#00618A", 1 ],
   [ "css3",         40,     "#3E95D8", 1 ],
-  // [ "wordpress",    36.66,  "#21759b", 1 ],
   [ "wordpress",    36.66,  "#787878", 1 ],
   [ "git",          33.33,  "#F05134", 1 ],
   [ "sass",         30,     "#CC6699", 1 ],
@@ -20,6 +24,7 @@ $skills = [
 ];
 
 shuffle($skills);
+
 $allReal = [
   "fr"=>[
     "Programmation"=>[
@@ -128,6 +133,67 @@ $allReal = [
         "langage"=>"-Illustrator",
         "texte"=>"OWWWW DAMN !"
       ]
+    ]
+  ]
+];
+
+$Texts = [
+  "fr"=>[
+    "siteTitle"=>"Traparic David Portfolio | Étudiant DUT MMI Développement & Programmation",
+    "menu"=>[
+      "pres"=>"Présentation",
+      "skills"=>"Mes compétences",
+      "real"=>"Mes réalisations",
+      "mail"=>"Envoyer un mail",
+      "dys"=>"Dyslexie"
+    ],
+    "pres"=>[
+      "title"=>"Présentation : ",
+      "status"=>"<span class='pres__important'>Statut : </span>",
+      "statusTxt"=>"Étudiant Bac +2",
+      "age"=>"<span class='pres__important'>Age : </span>",
+      "ageTxt"=>"19 ans",
+      "dom"=>"<span class='pres__important'>Domaine : </span>",
+      "domTxt"=>"Programmation & Développement web",
+      "hobbies"=>"<span class='pres__important'>Loisirs : </span>",
+      "hobbiesTxt"=>"Rubik's Cube & Musculation",
+      "paragraph"=>"Étudiant en 2e année de <span class='pres__important'><abbr title='Métiers du Multimédia et de l&quot;Internet'>DUT MMI</abbr></span> à Angoulême, j'ai pu continuer de développer ma passion dans la <span class='pres__important'>programmation</span> et découvrir le <span class='pres__important'>développement web</span>, ainsi que tous les domaines de la <span class='pres__important'>communication numérique</span>, en passant par <span class='pres__important'>l'audiovisuel</span> et <span class='pres__important'>l'infographie</span>."
+    ],
+    "skills"=>[
+      "title"=>"Mes Compétences :"
+    ],
+    "crea"=>[
+      "title"=>"Mes Réalisations :",
+      "intro"=>"À travers différents projets, j'ai pu améliorer certains aspects de mes compétences. Voici une liste non exhaustive des projets que j'ai pu réalisés :"
+    ]
+  ],
+  "en"=>[
+    "siteTitle"=>"Traparic David Portfolio",
+    "menu"=>[
+      "pres"=>"Presentation",
+      "skills"=>"My skills",
+      "real"=>"My creations",
+      "mail"=>"Send an email",
+      "dys"=>"Dyslexia"
+    ],
+    "pres"=>[
+      "title"=>"Presentation : ",
+      "status"=>"<span class='pres__important'>Status : </span>",
+      "statusTxt"=>"2 years undergraduate",
+      "age"=>"<span class='pres__important'>Age : </span>",
+      "ageTxt"=>"19 years old",
+      "dom"=>"<span class='pres__important'>Domain : </span>",
+      "domTxt"=>"Programmation & web developpement",
+      "hobbies"=>"<span class='pres__important'>Hobbies : </span>",
+      "hobbiesTxt"=>"Rubik's Cube & Musculation",
+      "paragraph"=>"Currently studying for an undergraduate technological degree for <span class='pres__important'><abbr title='Métiers du Multimédia et de l&quot;Internet'>MIT UDT</abbr></span> in France at Angoulême, I have been able to continue my passions in <span class='pres__important'>programming</span> and explore <span class='pres__important'>web developpement</span>. Thank's to MIT, I discovered all the <span class='pres__important'>numeric & internet communication</span> and also <span class='pres__important'>audiovisual</span> with <span class='pres__important'>graphism</span>."
+    ],
+    "skills"=>[
+      "title"=>"Mes Compétences :"
+    ],
+    "crea"=>[
+      "title"=>"Mes Réalisations :",
+      "intro"=>"À travers différents projets, j'ai pu améliorer certains aspects de mes compétences. Voici une liste non exhaustive des projets que j'ai pu réalisés :"
     ]
   ]
 ];

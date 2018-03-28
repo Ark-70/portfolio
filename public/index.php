@@ -1,26 +1,3 @@
-<!--
-
-Site créé par David Traparic
-Creative Commons BY-NC-SA
-Dernière update : 28/03/2018
-Site trop stylé
-https://iamvdo.me/blog/la-cascade-css-inherit-et-initial
-https://app.netlify.com/signup#_ga=2.154495422.728589584.1519897243-606316059.1519897243
-
-DOM Général :
-
-head
-body
-  header.menu
-  section.imgdegarde
-  main
-    section.presentation
-    section.competences
-    section.creations
-  footer
-
- -->
-
 <?php require '../app_portfolio/datas.php'; ?>
 
 <!DOCTYPE html>
@@ -30,7 +7,7 @@ body
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Portfolio et présentation de David Traparic, étudiant en développement et programmation en 2e année de DUT MMI">
   <meta name="google-site-verification" content="i5-PStLflHEPBHowRL6MStX7or38hI47kd3nO7kqtv0" />
-  <title>Traparic David Portfolio | Étudiant DUT MMI Développement & Programmation</title>
+  <title><?php echo $Texts[$lang]["siteTitle"]; ?></title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
 
@@ -38,6 +15,7 @@ body
   // on transfère les datas du datas.php au .js
   let skills = <?php echo json_encode($skills)?>,
   allReal = <?php echo json_encode($allReal)?>;
+
   </script>
   <link rel="stylesheet" href="portfolio/assets/css/myfont-codes.css">
   <link rel="stylesheet" href="portfolio/assets/css/style.css">
@@ -58,7 +36,6 @@ body
     <a class="menu__togglebtn menu__togglebtn--closed"><i class="icon icon-menu"></i></a>
     <nav class="menu">
       <div class="menu__logotitlecontainer">
-        <?xml version="1.0" encoding="utf-8"?>
         <!-- image vectorielle de mon logo inline comme ça sinon, on ne peut pas lui appliquer de style facilement -->
         <svg class="menu__logo" width="300" height="300" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
         	 viewBox="0 0 179.1 151.5" style="enable-background:new 0 0 179.1 151.5;" xml:space="preserve">
@@ -91,18 +68,24 @@ body
         <h4 class="titreportfolio titreportfolio--mini">David Traparic</h4>
       </div>
       <ul>
-        <a href="#parcours"><li>Présentation</li></a>
-        <a href="#skills"><li>Mes compétences</li></a>
-        <a href="#creations"><li>Mes réalisations</li></a>
-        <a class="mobileOptional" href="mailto:da.traparic@gmail.com"><li>Envoyer un mail</li></a>
+        <a href="#parcours"><li><?php echo $Texts[$lang]["menu"]["pres"]; ?></li></a>
+        <a href="#skills"><li><?php echo $Texts[$lang]["menu"]["skills"]; ?></li></a>
+        <a href="#creations"><li><?php echo $Texts[$lang]["menu"]["real"]; ?></li></a>
+        <a class="mobileOptional" href="mailto:da.traparic@gmail.com"><li><?php echo $Texts[$lang]["menu"]["mail"]; ?></li></a>
       </ul>
       <a href="portfolio/assets/CV_David_Traparic.pdf"><i class="menu__cv icon icon-file-pdf" title="télécharger le CV"></i></a>
-      <div class="access">
-        <a class="access__item access__item--moins">A-</a>
-        <a class="access__item access__item--egal">A=</a>
-        <a class="access__item access__item--plus">A+</a>
-        <a class="access__item access__item--dys">Dyslexie</a>
-      </div>
+        <div class="access">
+          <a class="access__item access__item--moins">A-</a>
+          <a class="access__item access__item--egal">A=</a>
+          <a class="access__item access__item--plus">A+</a>
+          <a class="access__item access__item--dys"><?php echo $Texts[$lang]["menu"]["dys"]; ?></a>
+          <form action="index.php" method="post">
+            <button type="submit" name="lang" value="fr" class="menu__lang menu__lang--fr">FR</button>
+          </form>
+          <form action="index.php" method="post">
+            <button type="submit" name="lang" value="en" class="menu__lang menu__lang--fr">EN</button>
+          </form>
+        </div>
     </nav>
   </header>
 
@@ -118,26 +101,26 @@ body
   <main>
   	<section id="parcours" class="parcours">
   		<div class="section__container">
-  			<h2><span class="underline">Présentation :</span></h2>
+  			<h2><span class="underline"><?php echo $Texts[$lang]["pres"]["title"]; ?></span></h2>
         <div class="profile__container">
           <div class="profile__centeredcontainer">
             <div class="profile__mask"></div>
             <img class="profile__image" src="portfolio/assets/img/profile280.jpg" srcset="portfolio/assets/img/profile236.jpg 236w, portfolio/assets/img/profile280.jpg 280w"  width="280" height="280" sizes="280px" alt="Photo David Traparic">
             <ul class="profile__txt">
-              <li><strong>Statut : </strong>Étudiant Bac +2</li>
-              <li><strong>Âge : </strong>19 ans</li>
-              <li><strong>Domaine : </strong>Programmation & Développement web</li>
-              <li><strong>Loisirs : </strong>Rubik's Cube & Musculation</li>
+              <li><strong><?php echo $Texts[$lang]["pres"]["status"]; ?></strong><?php echo $Texts[$lang]["pres"]["statusTxt"]; ?></li>
+              <li><strong><?php echo $Texts[$lang]["pres"]["age"]; ?></strong><?php echo $Texts[$lang]["pres"]["ageTxt"]; ?></li>
+              <li><strong><?php echo $Texts[$lang]["pres"]["dom"]; ?></strong><?php echo $Texts[$lang]["pres"]["domTxt"]; ?></li>
+              <li><strong><?php echo $Texts[$lang]["pres"]["hobbies"]; ?></strong><?php echo $Texts[$lang]["pres"]["hobbiesTxt"]; ?></li>
             </ul>
           </div>
         </div>
-        <p class="pres__txt">Étudiant en 2e année de <span class="pres__important"><abbr title="Métiers du Multimédia et de l'Internet">DUT MMI</abbr></span> à Angoulême, j'ai pu continuer de développer ma passion dans la <span class="pres__important">programmation</span> et découvrir le <span class="pres__important">développement web</span>, ainsi que tous les domaines de la <span class="pres__important">communication numérique</span>, en passant par <span class="pres__important">l'audiovisuel</span> et <span class="pres__important">l'infographie</span>.</p>
+        <p class="pres__txt"><?php echo $Texts[$lang]["pres"]["paragraph"]; ?></p>
   		</div>
   	</section>
 
   	<section id="skills" class="skills">
   		<div class="section__container">
-  			<h2><span class="underline">Mes compétences :</span></h2>
+  			<h2><span class="underline"><?php echo $Texts[$lang]["skills"]["title"]; ?></span></h2>
         <div class="skills__barscontainer">
 
           <?php
@@ -166,8 +149,8 @@ body
   	<section id="creations" class="creations">
   		<div class="section__container">
   			<article class="creations__listescontainer">
-          <h2 class="creations__titre"><span class="underline">Mes réalisations :</span></h2>
-          <p>À travers différents projets, j'ai pu améliorer certains aspects de mes compétences. Voici une liste non exhaustive des projets que j'ai pu réalisés :</p>
+          <h2 class="creations__titre"><span class="underline"><?php echo $Texts[$lang]["crea"]["title"]; ?></span></h2>
+          <p><?php echo $Texts[$lang]["crea"]["intro"]; ?></p>
           <?php
           foreach ($allReal["fr"] as $DomainTitle => $reals):
           ?>
@@ -206,7 +189,11 @@ body
   </main>
 
   <footer class="footer">
-    <a href="#">mentions légales</a>
+    <ul class="footer__list">
+      <li>David Traparic</li>
+      <li>da.traparic@gmail.com</li>
+      <li>Creative Communs BY-NC-SA</li>
+    </ul>
   </footer>
 </body>
 </html>

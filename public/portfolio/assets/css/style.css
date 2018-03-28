@@ -195,6 +195,13 @@ h4{
 .access__item--dysl{
   font-family:opendys;
 }
+.menu form{
+  display:inline-block;
+}
+.menu button{
+  border:0;
+  background-color: transparent;
+}
 
 /************************** "PAGE" DE GARDE **************************/
 .imgdegarde{
@@ -350,6 +357,19 @@ section:last-of-type .section__container{
 .html--dyslexie .titreportfolio--mini{
   font-size: 2.6rem;
 }
+/******************** FOOTER *************************/
+.footer__list{
+  display:flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  background-color: #202020;
+  color:#777;
+  height:5vh;
+  padding:0;
+  margin:0;
+}
+
 
 /*___Mobile Queries___*/
 @media screen and (max-width:719px){
