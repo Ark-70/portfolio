@@ -68,6 +68,12 @@ h4{
   font-style: normal;
   font-family:myfont;
 }
+.icon::before:hover{
+  text-decoration: none;
+}
+.icon:hover{
+  text-decoration: none;
+}
 
 /************************** MENU **************************/
 .menu__container{
@@ -77,7 +83,6 @@ h4{
   width:20vw;
   height:100vh;
   min-width:300px;
-  color:#ddd;
   background-color: #202020;
   transform: translateX(-100%);
 }
@@ -111,12 +116,13 @@ h4{
   text-decoration: none;
 }
 .menu{
-  text-align: center;
-  height:100%;
   display:flex;
   flex-flow: column;
   justify-content: space-around;
   align-items: center;
+  text-align: center;
+  height:100%;
+  color:#ddd;
 }
 .menu__logo{
   fill:var(--favcolor);
@@ -127,6 +133,7 @@ h4{
   filter: drop-shadow( 3px 3px 1px #888888 );
 }
 .titreportfolio.titreportfolio--mini{
+  line-height: 3.5rem;
   font-size: 5.5rem;
   text-shadow: 1.5px 1.5px 1px #888888;
 }
@@ -139,21 +146,30 @@ h4{
   border:1px solid #353535;
   list-style: none;
   /* background-color: #fff; */
-  padding:1.5vh;
-  margin:2vh;
+  padding:1.4vh;
+  margin:1.8vh;
   transition:background-color 0.5s ease;
 }
 .menu li:hover{
   background-color: #303030;
 }
-.menu li a{
+.menu a{
   text-decoration:inherit;
   color:inherit;
 }
-.menu li a:hover{
+.menu a:hover{
   color:#fff;
 }
+.menu__blocmail{
+  display:flex;
+  justify-content: space-between;
+}
+.menu__blocmail li{
+  margin-top:0;
+  margin-bottom:0;
+}
 .menu__cv{
+  line-height:3.5rem;
   font-size:5rem;
   color:var(--favcolor);
   transition:color 0.5s ease;
@@ -167,7 +183,7 @@ h4{
 }
 .access__item{
   margin:0.5em;
-  color:white;
+  color:inherit;
   font-weight: bold;
   text-decoration:none;
   cursor:pointer;
@@ -187,8 +203,6 @@ h4{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /*background-color:#3B3B3B;*/
-  /*filter: brightness(-50%);*/
 }
 .garde__backgroundimg{
   height:100%;
@@ -196,7 +210,6 @@ h4{
   position:absolute;
   background-image: url(../img/motif.png);
   filter: brightness(23%);
-  z-index:0;
 }
 .titreportfolio{
   line-height: 0.9em;
@@ -204,7 +217,7 @@ h4{
   color: var(--favcolor);
   margin:0;
   font-size: 25rem;
-  z-index:2;
+  z-index:1;
   text-shadow: 3px 3px 1px #888888;
 }
 
@@ -218,7 +231,9 @@ h4{
   height: 50px;
   border: 2px solid #fff;
   border-radius: 50px;
+  opacity:0.8;
   transform: translate(-50%,-100%);
+  z-index: 2;
 }
 .garde__mouse::before {
   /* molette de la souris */
@@ -231,9 +246,10 @@ h4{
   margin-left: -3px;
   background-color: #fff;
   border-radius: 100%;
+  opacity:0.8;
   -webkit-animation: sdb10 2s infinite;
   animation: sdb10 2s infinite;
-  box-sizing: border-box;
+  z-index: 3;
 }
 @-webkit-keyframes sdb10 {
   0%  {-webkit-transform: translate(0, 0); opacity: 0;}
@@ -318,6 +334,21 @@ background: url(../img/motifdarkcinquo.png) fixed top;
 }
 section:last-of-type .section__container{
   margin-bottom:5vh;
+}
+.html--dyslexie body,
+.html--dyslexie .titreportfolio,
+.html--dyslexie .underline,
+.html--dyslexie .creations__titre,
+.html--dyslexie .creations__soustitre,
+.html--dyslexie .pres__important,
+.html--dyslexie .creations__projet{
+  font-family:opendys !important;
+}
+.html--dyslexie .titreportfolio{
+  font-size: 16rem;
+}
+.html--dyslexie .titreportfolio--mini{
+  font-size: 2.6rem;
 }
 
 /*___Mobile Queries___*/

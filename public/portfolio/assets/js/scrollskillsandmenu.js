@@ -22,6 +22,10 @@ $(function(){
 
   });
 
+  $('.access__item--dys').click(function(){
+    $('html').toggleClass('html--dyslexie');
+  });
+
   // La arrow function (ES6) (raccourci de fonction anonyme)
   // La fonction window.onscroll ne peut être utilisée qu'une fois sous peine d'écraser la précédente d'un autre fichier
   $(document).scroll(function(){
@@ -33,8 +37,10 @@ $(function(){
 
     animateSkillsIfNeeded();
 
-    
+
   });
+
+  /***************** FUNCTIONS : MENU ******************/
 
   function chooseDisplayOfMenuAtStart(){
     //But de cette fonction : choisir l'état du menu au lancement du site, selon la taille d'écran de l'utilisateur
@@ -52,7 +58,7 @@ $(function(){
     }
   }
 
-/***************FUNCTIONS : SKILLS****************/
+/*************** FUNCTIONS : SKILLS ****************/
 
   function animateSkillsIfNeeded(){
     //Si au scroll, les skills ne sont pas encore triés et qu'on les voit, on les trie
@@ -99,5 +105,8 @@ $(function(){
     // return !(rect.bottom < 0 || rectcenter > viewHeight);
     return !(rectquart < 0 || rectcenter > viewHeight);
   }
+
+  /***************** FUNCTIONS : FONT DYSLEXIE ******************/
+
 
 });
