@@ -39,7 +39,7 @@ $allReal = [
       "master"=>[
         "titre"=>"Mastermind",
         "langage"=>"-Javascript + ES6",
-        "texte"=>"<p>Ce <span class='creations__projet creations__projet--master'>mastermind</span> était un exercice de mon DUT MMI pour nous initier au <span class='creations__projet creations__projet--master'>Javascript</span>. J'ai pu avec ce jeu m'entraîner sur différents aspects du Javascript comme <span class='creations__projet creations__projet--master'><abbr title='Ensemble de nouvelles manières d\'écriture Javascript facilitant sa lecture et son écriture'>ES6</abbr></span> et les modules.</p>"
+        "texte"=>"<p>Ce <span class='creations__projet creations__projet--master'>mastermind</span> était un exercice de mon DUT MMI pour nous initier au <span class='creations__projet creations__projet--master'>Javascript</span>. J'ai pu avec ce jeu m'entraîner sur différents aspects du Javascript comme <span class='creations__projet creations__projet--master'><abbr title='Ensemble de nouvelles manières d&quot;'écriture Javascript facilitant sa lecture et son écriture'>ES6</abbr></span> et les modules.</p>"
       ],
       "day"=>[
         "titre"=>"A Normal Day",
