@@ -12,17 +12,13 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
 
-  <script type="text/javascript">
+  <script>
   // on transfère les datas du datas.php au .js
   let skills = <?php echo json_encode($skills)?>,
   allReal = <?php echo json_encode($allReal)?>;
 
   </script>
-  <link rel="stylesheet" href="portfolio/assets/css/myfont-codes.css">
-  <link rel="stylesheet" href="portfolio/assets/css/style.css">
-  <link rel="stylesheet" href="portfolio/assets/css/pres.css">
-  <link rel="stylesheet" href="portfolio/assets/css/skills.css">
-  <link rel="stylesheet" href="portfolio/assets/css/realisations.css">
+  <link rel="stylesheet" href="portfolio/assets/css/minified.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" defer></script>
   <script src="portfolio/assets/js/scrollskillsandmenu.js" defer></script>
