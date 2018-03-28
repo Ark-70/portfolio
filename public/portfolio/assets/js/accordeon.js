@@ -5,52 +5,14 @@ $(function(){
   let clickPossible = true;
   let currentActiveReal = null;
   let $main = $('main');
-  let resizeCalculPossible = true;
+  // let resizeCalculPossible = true;
   selectDefault();
-  if (!window.matchMedia('(max-device-width: 719px)').matches) {
-    appliquerMaxHeightATous();
-  }
-
-  //Je voulais que le calcul du MaxHeight se refasse à chaque resize de la page mais je n'ai pas réussi, il vous faudra donc faire F5 une fois la taille de la page modifiée
-
-  // $(window).resize(function() {
-  //   if (resizeCalculPossible){
-  //     resizeCalculPossible = false;
-  //     selectDefault();
-  //     resetAutoHeight();
-  //     appliquerMaxHeightATous();
-  //   }
-  // });
 
   function selectDefault(){
     $($('.creations__liste .creations__projet')[0]).addClass('creations__projet--selected');
     $($('.accordeon__titre')[0]).addClass('accordeon__titre--selected');
     $($('.accordeon__contentbox')[0]).addClass('accordeon__contentbox--open');
     $('main').addClass('real__active--speedup');
-  }
-
-  function trouverAccordeonHauteurMax(){
-    let maxTmp = 0;
-    for (desc of $('.accordeon__desc')) {
-      // dans cette forof loop, desc n'est plus un objet jQuery mais JS natif
-      maxTmp = Math.max(maxTmp,$(desc).outerHeight());
-      // console.log(desc,$(desc).outerHeight());
-    }
-    return maxTmp;
-  }
-
-  function resetAutoHeight(){
-    for (desc of $('.accordeon__desc')) {
-      desc.style.height = "initial";
-    }
-  }
-
-  function appliquerMaxHeightATous(){
-    for (desc of $('.accordeon__desc')){
-      //puisque desc est objet js natif
-      desc.style.height = trouverAccordeonHauteurMax()+"px";
-
-    }
   }
 
   $('.creations__liste .creations__projet').click(function(event){
@@ -78,7 +40,7 @@ $(function(){
       $main.removeClass();
 
       //Si on est sur mobile je n'active pas les background image
-      if (!window.matchMedia('(max-device-width: 719px)').matches) {
+      if (window.matchMedia('(min-device-width: 719px)').matches) {
         $main.addClass('real__active--'+currentActiveReal);
       }
 

@@ -1,24 +1,44 @@
-@import url(https://fonts.googleapis.com/css?family=Quando);
+/* ORGANISATION CSS : */
+/* MÊME ORDRE QUE LE DOM HTML */
+
+/*   Fonts           */
+/*   Core            */
+/*   Menu            */
+/*   ImgDeGarde      */
+/*   souris animée   */
+/*   General/Divers  */
+
+
+
+
 @font-face {
-    font-family:asgalt;
-    src: url('../asgaltregular.ttf');
+  /*___font titreportfolio___*/
+  font-family:asgalt;
+  src: url('../fonts/asgaltregular.ttf');
+}
+@font-face {
+    font-family:Quando;
+    src: url('../fonts/quando.woff2') format('woff2');
+}
+@font-face {
+    font-family:opendys;
+    src: url('../fonts/opendyslexic.woff') format('woff');
 }
 @font-face {
     font-family:myfont;
-    src: url('../myfont.woff') format('woff');
+    src: url('../fonts/myfont.woff') format('woff');
 }
 @font-face {
     font-family:montserrat;
-    src: url(https://fonts.gstatic.com/s/montserrat/v10/IVeH6A3MiFyaSEiudUMXE4o3ZslTYfJv0R05CazkwN8.woff) format('woff');
+    src: url('../fonts/montserrat.woff') format('woff');
 }
+
+/************************** GENERAL **************************/
 html{
-	/* font-family: Quando; */
-  /* font-family: "Merriweather", Georgia, serif; */
 	font-weight:200;
   font-size:62.5%;
   --favcolor:#e59400;
 }
-
 body{
   /* text-shadow: */
   font-size:1.7rem;
@@ -37,11 +57,17 @@ p{
 }
 
 h2{
-  /* 10px sauf en bas 20px */
+  font-size: 3rem;
   margin: 0 10px 20px;
 }
-
-
+h4{
+  font-size: 1.8rem;
+}
+.icon{
+  color:inherit;
+  font-style: normal;
+  font-family:myfont;
+}
 
 /************************** MENU **************************/
 .menu__container{
@@ -51,9 +77,13 @@ h2{
   width:20vw;
   height:100vh;
   min-width:300px;
+  color:#ddd;
   background-color: #202020;
-  transition: transform 0.5s ease;
   transform: translateX(-100%);
+}
+.menu__container--ready{
+  /* class appliquée dans le css, sinon peut faire afficher le mouvement du translate lors de l'affichage du site */
+  transition: transform 0.5s ease;
 }
 .menu__container--open{
   transform:initial;
@@ -77,15 +107,28 @@ h2{
 .menu__togglebtn:hover{
   /* color:#999; */
   color:#ccc;
-  background-color: rgba(70,70,70,0.6);
+  background-color: rgba(100,100,100,0.7);
   text-decoration: none;
 }
 .menu{
-  height:75%;
+  text-align: center;
+  height:100%;
   display:flex;
   flex-flow: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
+}
+.menu__logo{
+  fill:var(--favcolor);
+  width:150px;
+  height:auto;
+  -webkit-filter: drop-shadow( 3px 3px 1px #888888 );
+  -moz-filter: drop-shadow( 3px 3px 1px #888888 );
+  filter: drop-shadow( 3px 3px 1px #888888 );
+}
+.titreportfolio.titreportfolio--mini{
+  font-size: 5.5rem;
+  text-shadow: 1.5px 1.5px 1px #888888;
 }
 .menu ul{
   padding:0;
@@ -104,26 +147,47 @@ h2{
   background-color: #303030;
 }
 .menu li a{
-  text-decoration: none;
-  color:#ddd;
+  text-decoration:inherit;
+  color:inherit;
 }
-
-
-
-
-
-
-
-
+.menu li a:hover{
+  color:#fff;
+}
+.menu__cv{
+  font-size:5rem;
+  color:var(--favcolor);
+  transition:color 0.5s ease;
+}
+.menu__cv:hover{
+  color:#ff330d;
+}
+.access{
+  -moz-user-select:none;
+  -webkit-user-select:none;
+}
+.access__item{
+  margin:0.5em;
+  color:white;
+  font-weight: bold;
+  text-decoration:none;
+  cursor:pointer;
+}
+.access__item:hover{
+  color:white;
+  text-decoration: none;
+}
+.access__item--dysl{
+  font-family:opendys;
+}
 
 /************************** "PAGE" DE GARDE **************************/
 .imgdegarde{
-	height:100vh;
-	display:flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	/*background-color:#3B3B3B;*/
+  height:100vh;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /*background-color:#3B3B3B;*/
   /*filter: brightness(-50%);*/
 }
 .garde__backgroundimg{
@@ -134,22 +198,57 @@ h2{
   filter: brightness(23%);
   z-index:0;
 }
-.imgdegarde h1{
-	line-height: 0.9em;
-	font-family: asgalt,sans-serif;
-	color: var(--favcolor);
+.titreportfolio{
+  line-height: 0.9em;
+  font-family: asgalt,sans-serif;
+  color: var(--favcolor);
   margin:0;
-	font-size: 25rem;
+  font-size: 25rem;
   z-index:2;
   text-shadow: 3px 3px 1px #888888;
 }
 
-
-
-
-#mattercanvas{
-	width:100%;
+/******************** MOUSE IMAGE ANIMATION *************************/
+.garde__mouse {
+  /* rectangle de la souris */
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 30px;
+  height: 50px;
+  border: 2px solid #fff;
+  border-radius: 50px;
+  transform: translate(-50%,-100%);
 }
+.garde__mouse::before {
+  /* molette de la souris */
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  content: '';
+  width: 6px;
+  height: 6px;
+  margin-left: -3px;
+  background-color: #fff;
+  border-radius: 100%;
+  -webkit-animation: sdb10 2s infinite;
+  animation: sdb10 2s infinite;
+  box-sizing: border-box;
+}
+@-webkit-keyframes sdb10 {
+  0%  {-webkit-transform: translate(0, 0); opacity: 0;}
+  40% {opacity: 1;}
+  80% {-webkit-transform: translate(0, 20px); opacity: 0;}
+  100% {opacity: 0;}
+}
+@keyframes sdb10 {
+  0%  {transform: translate(0, 0); opacity: 0;}
+  40% {opacity: 1;}
+  80% {transform: translate(0, 20px); opacity: 0;}
+  100% {opacity: 0;}
+}
+
+
 
 .underline{
 	position:relative;
@@ -158,7 +257,6 @@ h2{
   background:inherit;
   color:inherit;
 }
-
 .underline:before {
   content: "";
   position: absolute;
@@ -173,14 +271,12 @@ h2{
   -webkit-transition: all 0.3s ease-in-out 0s;
   transition: all 0.3s ease-in-out 0s;
 }
-
 .underline:hover:before {
   visibility: visible;
   transform: scaleX(1);
 }
 
 section{
-	/*padding: 30px 0;*/
   background-color: transparent;
   color:white;
   display:flex;
@@ -213,7 +309,7 @@ background: url(../img/motifdarkcinquo.png) fixed top;
 /*___Général : section___*/
 .section__container{
 	width: 85%;
-  margin: 10vh 0 0;
+  margin: 12vh 0 0;
   padding: 25px 10px;
 	/*padding: 0 15px;*/
   background:#3B3B3B;
@@ -247,13 +343,13 @@ section:last-of-type .section__container{
     top:25px;
     right:-25px;
     line-height:0.7em;
-    padding:1rem 1.2rem;
+    padding:1rem 1rem;
   }
   .menu__togglebtn--opened{
     right:25px;
     transform:translateX(0);
   }
   .menu__togglebtn .icon{
-    font-size:3rem;
+    font-size:3.5rem;
   }
 }

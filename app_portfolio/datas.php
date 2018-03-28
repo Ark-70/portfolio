@@ -22,7 +22,6 @@ $skills = [
 shuffle($skills);
 $allReal = [
   "fr"=>[
-
     "Programmation"=>[
       "speedup"=>[
         "titre"=>"SpeedUp",

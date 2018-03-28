@@ -32,11 +32,11 @@
   left:-75%;
 
   /* même taille que l'image */
-  width: 20vw;
-  height: 100%;
+
+  width: 100%;
   max-width: 280px;
   min-width: 200px;
-  min-height: 200px;
+  height:100%;
   z-index:1;
   /* même couleur que le fond */
   background-color: #3b3b3b;

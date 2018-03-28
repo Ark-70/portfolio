@@ -1,9 +1,6 @@
-.icon{
-  font-style: normal;
-  font-family:myfont;
-}
 .icon-mail:before { content: '\e800'; } /* '' */
-.icon-close:before { content: '\e803'; } /* '' */
+.icon-down-big:before { content: '\e801'; } /* '' */
+.icon-cancel:before { content: '\e803'; } /* '' */
 .icon-github-circled:before { content: '\f09b'; } /* '' */
 .icon-menu:before { content: '\f0c9'; } /* '' */
 .icon-mail-alt:before { content: '\f0e0'; } /* '' */

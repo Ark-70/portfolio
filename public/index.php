@@ -1,8 +1,23 @@
 <!--
 
+Site créé par David Traparic
+Creative Commons BY-NC-SA
+Dernière update : 28/03/2018
 Site trop stylé
 https://iamvdo.me/blog/la-cascade-css-inherit-et-initial
 https://app.netlify.com/signup#_ga=2.154495422.728589584.1519897243-606316059.1519897243
+
+DOM Général :
+
+head
+body
+  header.menu
+  section.imgdegarde
+  main
+    section.presentation
+    section.competences
+    section.creations
+  footer
 
  -->
 
@@ -30,34 +45,76 @@ https://app.netlify.com/signup#_ga=2.154495422.728589584.1519897243-606316059.15
   <link rel="stylesheet" href="portfolio/assets/css/skills.css">
   <link rel="stylesheet" href="portfolio/assets/css/realisations.css">
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116312672-1"></script> -->
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" defer></script>
-  <script type="text/javascript" src="portfolio/assets/js/matter.min.js" defer></script>
-  <script type="text/javascript" src="portfolio/assets/js/scrollskillsandmenu.js" defer></script>
-  <script type="text/javascript" src="portfolio/assets/js/accordeon.js" defer></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" defer></script>
+  <script src="portfolio/assets/js/scrollskillsandmenu.js" defer></script>
+  <script src="portfolio/assets/js/accordeon.js" defer></script>
+  <script src="portfolio/assets/js/changefontsize.js" defer></script>
 
 </head>
 <body>
 
+  <!-- MENU ET BOUTON BURGER -->
   <header class="menu__container">
     <a class="menu__togglebtn menu__togglebtn--closed"><i class="icon icon-menu"></i></a>
       <nav class="menu">
+        <div class="menu__logotitlecontainer">
+          <?xml version="1.0" encoding="utf-8"?>
+          <!-- image vectorielle de mon logo inline comme ça sinon, on ne peut pas lui appliquer de style facilement -->
+          <svg class="menu__logo" width="300" height="300" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          	 viewBox="0 0 179.1 151.5" style="enable-background:new 0 0 179.1 151.5;" xml:space="preserve">
+            <path d="M178.7,58.3c-0.4-2-1.3-4.1-2.6-6.4c-1.9-3.3-4.2-5.9-7-8c-2.8-2.1-5.9-3.5-9.1-4.4l0,0c-0.8-0.3-1.6-0.5-2.4-0.7
+            	c-1.1-0.2-5.7-0.6-8.9-0.6c-8.1,0-15.1,2.4-21,7.1c-5.9,4.8-10.3,11.5-13.3,20.2c-2,5.9-3.2,12.2-4,18.5c-0.8,1.2-1.7,2.3-2.7,3.3
+            	c-1.6,1.6-3.3,2.7-5.2,3.5c-1.9,0.8-3.8,1.1-5.7,1.1H90V54c0-1.7,0.5-3.3,1.2-4.8c0.6-1.5,2-2.5,3.7-3.2c1.1-0.4,2.5-0.8,4.7-1.2
+            	c2.2-0.4,4.4-0.7,5.4-0.7v-6H59v6c1,0.1,3.1,0.4,5.1,1c2,0.5,3.6,1.1,5,1.8c1.8,0.8,3.2,1.9,3.8,3.2c0.6,1.3,1.1,2.9,1.1,4.7v37.3
+            	h-6.8c-2,0-3.8-0.3-5.7-1.1c-1.8-0.8-3.6-2-5.3-3.6c-2.7-2.6-4.6-5.5-5.7-8.7c-1.1-3.2-2.4-7.2-3.9-11.8c-1.2-3.9-2.7-7.9-4.4-12
+            	c-1.7-4.1-4-7.6-6.9-10.5c-2.2-2.2-4.6-3.8-7.3-5c-2.7-1.2-5.7-1.8-9.1-1.8c-2.3,0-4.3,0.3-6.1,0.9c-1.7,0.6-3.1,1.3-4.2,2.3
+            	c-1.1,1.1-1.9,2.2-2.4,3.3c-0.5,1.2-0.7,2.4-0.7,3.8c0,2.2,0.7,4.2,2,6.1c1.3,1.9,3.4,2.9,6.3,2.9c2.1,0,3.6-0.3,4.7-0.8
+            	c1.1-0.5,2.1-1.3,3.2-2.5c0.8-0.8,1.6-2,2.5-3.5c0.9-1.6,1.6-2.9,2.2-4.1c1.5,0.9,2.7,2.2,3.8,3.6c1.1,1.5,2,3,2.8,4.8
+            	c0.7,1.6,1.4,3.5,2.1,5.8c0.7,2.3,1.3,4.3,1.8,6.1c0.7,2.4,1.5,4.6,2.2,6.8c0.7,2.2,1.7,4.4,2.8,6.6c1.2,2.4,2.3,4.6,3.8,6.6
+            	c1.5,2.1,3.2,4,5.2,5.9v1.1c-5,1.5-10,4-13.8,7.5c-3.8,3.5-7,8.2-9.6,14.1c-1.5,3.4-3.1,6.9-4.8,10.5c-1.7,3.6-3.2,6.8-4.3,9.4
+            	c-1.4,3-2.8,5.2-4.2,6.6c-1.4,1.4-3.2,2.3-5.5,2.7c-1.5,0.3-3.1,0.5-4.6,0.6C2.7,144.8,2,145,0,145.1v6h31.1
+            	c1.8-5,3.8-10.5,6.1-16.2c2.3-5.7,4.5-10.9,6.6-15.5c3.7-8.2,7.3-13.7,10.7-16.3s8.2-4,14.3-4H74v36.7c0,1.9-0.6,3.5-1.3,4.9
+            	c-0.7,1.3-2,2.4-3.5,3c-1,0.4-2.6,0.7-4.9,1c-2.3,0.2-4.3,0.4-5.3,0.5v6h46v-6c-1-0.1-3.2-0.3-5.5-0.9c-2.3-0.5-3.8-1-4.6-1.3
+            	c-1.7-0.8-3.1-2-3.8-3.3c-0.7-1.4-1.1-2.9-1.1-4.7V99.1h5.3c6,0,9.3,1.7,12.3,5c0.9,1,1.9,2.2,2.8,3.6c1.1,12.3,3.8,22.9,8.2,29.9
+            	c5.8,9.3,14.4,13.9,25.7,13.9c5.3,0,10.3-0.3,14.7-1c4.4-0.7,9-1.7,13-3v-23.4h-6.9c-1.4,6-2.9,9.5-4.5,12.2
+            	c-1.6,2.8-3.5,4.8-5.9,6.1c-2.3,1.3-5.3,1.9-9,1.9c-4.8,0-8.9-1.9-12.2-5.7c-3.3-3.8-5.8-9.4-7.5-16.9c-1.7-7.5-2.5-16.5-2.5-27.1
+            	c0-9.1,0.8-17,2.3-23.7c0.5-1.5,0.9-2.8,1.2-3.9c0.5-1.6,1.1-3.6,1.9-6c0-0.1,0.1-0.3,0.1-0.4c1.7-4,3.7-7.2,6-9.6
+            	c3.6-3.7,7.7-5.6,12.3-5.6c3.1,0,5.7,0.6,7.9,1.8c2.2,1.2,4.1,3.2,5.8,5.9c-0.1,0.2-0.3,0.4-0.4,0.6c-0.9,1.5-1.6,3.1-2,4.6
+            	c-0.5,1.5-0.6,3.1-0.4,4.7c0.2,1.6,0.7,3.3,1.7,5c0.9,1.6,1.9,2.7,2.9,3.3c1,0.6,2.2,1,3.5,1.2c1.1,0.2,2.3,0.2,3.6-0.1
+            	c1.3-0.3,2.5-0.8,3.7-1.4c1.4-0.8,2.6-1.8,3.5-3.1c0.9-1.2,1.5-2.6,1.8-4.2C179.2,62.1,179.1,60.3,178.7,58.3z"/>
+            <g>
+            	<path d="M54.3,27.2c-1.9-0.4-3.1-3.2-0.4-4.2c1.3-0.5,10.6-1.2,16.6-2.6c6.3-1.5,11.7-2.9,17-5.1c5-2,9.7-4.3,13.4-6.5
+            		c3.9-2.3,6.9-5.3,10.3-7.8c2.8-2,6.5-1,7.6,0.8c1.3,2.4,0.7,5.3-0.4,7.3c-1.3,2.3-4.3,5.4-8,7.9c-2.2,1.5-5.2,2.5-8.5,3.8
+            		c-3.3,1.3-6.3,2.1-10.4,3c-4.2,0.9-8.1,1.9-12.5,2.5c-4.3,0.5-8.3,1.3-12.7,1.3C61.8,27.8,57.3,27.8,54.3,27.2z"/>
+            </g>
+          </svg>
+          <h4 class="titreportfolio titreportfolio--mini">David Traparic</h4>
+        </div>
         <ul>
           <li><a href="#parcours">Présentation</a></li>
           <li><a href="#skills">Mes compétences</a></li>
           <li><a href="#creations">Mes réalisations</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
+        <i class="menu__cv icon icon-file-pdf" title="télécharger le CV"><a href=""></a></i>
+        <div class="access">
+          <a class="access__item access__item--moins">A-</a>
+          <a class="access__item access__item--egal">A=</a>
+          <a class="access__item access__item--plus">A+</a>
+          <a class="access__item access__item--dysl">Dyslexie</a>
+        </div>
       </nav>
   </header>
 
+  <!-- TITRE PRINCIPAL -->
 	<section class="imgdegarde">
 		<div class="garde__backgroundimg"></div>
-		<h1>David</h1>
-		<h1>Traparic</h1>
+		<h1 class="titreportfolio">David</h1>
+    <h1 class="titreportfolio">Traparic</h1>
+    <i class="garde__mouse"></i>
 	</section>
 
+  <!-- LE VRAI CONTENU / TOUTES LES SECTIONS -->
   <main>
   	<section id="parcours" class="parcours">
   		<div class="section__container">
@@ -148,6 +205,8 @@ https://app.netlify.com/signup#_ga=2.154495422.728589584.1519897243-606316059.15
   	</section>
   </main>
 
-	<!-- <script src="assets/js/sketch.js"></script> -->
+  <footer class="footer">
+    <a href="#">mentions légales</a>
+  </footer>
 </body>
 </html>
