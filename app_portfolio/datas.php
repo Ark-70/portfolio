@@ -157,7 +157,7 @@ $Texts = [
       "domTxt"=>"Programmation & Développement web",
       "hobbies"=>"<span class='pres__important'>Loisirs : </span>",
       "hobbiesTxt"=>"Rubik's Cube & Musculation",
-      "paragraph"=>"Étudiant en 2e année de <span class='pres__important'><abbr title='Métiers du Multimédia et de l&quot;Internet'>DUT MMI</abbr></span> à Angoulême, j'ai pu continuer de développer ma passion dans la <span class='pres__important'>programmation</span> et découvrir le <span class='pres__important'>développement web</span>, ainsi que tous les domaines de la <span class='pres__important'>communication numérique</span>, en passant par <span class='pres__important'>l'audiovisuel</span> et <span class='pres__important'>l'infographie</span>."
+      "paragraph"=>"Étudiant en 2e année de <span class='pres__important'><abbr title='Métiers du Multimédia et de l&quot;Internet'>DUT MMI</abbr></span> à Angoulême, j'ai pu continuer de développer ma passion dans la <span class='pres__important'>programmation</span> et découvrir le <span class='pres__important'>développement web</span>, ainsi que tous les domaines de la <span class='pres__important'>communication numérique</span>, en passant par <span class='pres__important'>l'audiovisuel</span> et <span class='pres__important'>l'infographie</span>. J'espère rentrer en <span class='pres__important'>école d'ingénieurs</span> et pouvoir travailler plus tard dans l'<span class='pres__important'>intelligence artificielle</span> et le <span class='pres__important'>Deep Learning</span>."
     ],
     "skills"=>[
       "title"=>"Mes Compétences :"
@@ -186,7 +186,7 @@ $Texts = [
       "domTxt"=>"Programmation & web developpement",
       "hobbies"=>"<span class='pres__important'>Hobbies : </span>",
       "hobbiesTxt"=>"Rubik's Cube & Musculation",
-      "paragraph"=>"Currently studying for an undergraduate technological degree for <span class='pres__important'><abbr title='Métiers du Multimédia et de l&quot;Internet'>MIT UDT</abbr></span> in France at Angoulême, I have been able to continue my passions in <span class='pres__important'>programming</span> and explore <span class='pres__important'>web developpement</span>. Thank's to MIT, I discovered all the <span class='pres__important'>numeric & internet communication</span> and also <span class='pres__important'>audiovisual</span> with <span class='pres__important'>graphism</span>."
+      "paragraph"=>"Currently studying for an undergraduate technological degree for <span class='pres__important'><abbr title='Métiers du Multimédia et de l&quot;Internet'>MIT UDT</abbr></span> in France at Angoulême, I have been able to continue my passions in <span class='pres__important'>programming</span> and explore <span class='pres__important'>web developpement</span>. Thank's to MIT, I discovered all the <span class='pres__important'>numeric & internet communication</span> and also <span class='pres__important'>audiovisual</span> with <span class='pres__important'>graphism</span>. I hope to enter an <span class='pres__important'>engineering school</span> and to work in <span class='pres__important'>AI</span> in the future"
     ],
     "skills"=>[
       "title"=>"Mes Compétences :"
