@@ -19,6 +19,11 @@ https://app.netlify.com/signup#_ga=2.154495422.728589584.1519897243-606316059.15
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
 
+  <script type="text/javascript">
+  // on transfère les datas du datas.php au .js
+  let skills = <?php echo json_encode($skills)?>,
+  allReal = <?php echo json_encode($allReal)?>;
+  </script>
   <link rel="stylesheet" href="portfolio/assets/css/myfont-codes.css">
   <link rel="stylesheet" href="portfolio/assets/css/style.css">
   <link rel="stylesheet" href="portfolio/assets/css/pres.css">
@@ -27,11 +32,6 @@ https://app.netlify.com/signup#_ga=2.154495422.728589584.1519897243-606316059.15
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116312672-1"></script> -->
-  <script type="text/javascript" defer>
-  // on transfère les datas du datas.php au .js
-  let skills = <?php echo json_encode($skills)?>,
-  allReal = <?php echo json_encode($allReal)?>;
-  </script>
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" defer></script>
   <script type="text/javascript" src="portfolio/assets/js/matter.min.js" defer></script>
   <script type="text/javascript" src="portfolio/assets/js/scrollskillsandmenu.js" defer></script>
@@ -65,7 +65,7 @@ https://app.netlify.com/signup#_ga=2.154495422.728589584.1519897243-606316059.15
         <div class="profile__container">
           <div class="profile__centeredcontainer">
             <div class="profile__mask"></div>
-            <img class="profile__image" srcset="portfolio/assets/img/profile236.jpg 236w, portfolio/assets/img/profile280.jpg 280w" src="portfolio/assets/img/profile280.jpg" width="280" height="280" alt="Photo David Traparic">
+            <img class="profile__image" src="portfolio/assets/img/profile280.jpg" srcset="portfolio/assets/img/profile236.jpg 236w, portfolio/assets/img/profile280.jpg 280w"  width="280" height="280" sizes="280px" alt="Photo David Traparic">
             <ul class="profile__txt">
               <li><strong>Statut : </strong>Étudiant Bac +2</li>
               <li><strong>Âge : </strong>19 ans</li>
@@ -74,7 +74,7 @@ https://app.netlify.com/signup#_ga=2.154495422.728589584.1519897243-606316059.15
             </ul>
           </div>
         </div>
-        <p class="pres__txt">Étudiant en 2e année de <span class="pres__important"><abbr title="Métiers du Multimédia et de l'Internet">DUT MMI</abbr></span> à Angoulême, j'ai pu continuer de développer ma passion dans la <span class="pres__important">programmation</span> et découvrir le <span class="pres__important">développement web</span>, ainsi que tous les domaines de la <span class="pres__important">communication numérique</span>, en passant par <span class="pres__important">l'audiovisuel</span> et <span class="pres__important">l'infographie</span.</p>
+        <p class="pres__txt">Étudiant en 2e année de <span class="pres__important"><abbr title="Métiers du Multimédia et de l'Internet">DUT MMI</abbr></span> à Angoulême, j'ai pu continuer de développer ma passion dans la <span class="pres__important">programmation</span> et découvrir le <span class="pres__important">développement web</span>, ainsi que tous les domaines de la <span class="pres__important">communication numérique</span>, en passant par <span class="pres__important">l'audiovisuel</span> et <span class="pres__important">l'infographie</span>.</p>
   		</div>
   	</section>
 
@@ -92,7 +92,7 @@ https://app.netlify.com/signup#_ga=2.154495422.728589584.1519897243-606316059.15
                   <span class="sr-only"><?php echo $skill[1] ?>% Complete</span>
                 </div>
               </div>
-              <i alt="logo <?php echo $skill[0] ?>" class="devicon devicon-<?php echo $skill[0]; ?>-plain"></i>
+              <i class="devicon devicon-<?php echo $skill[0]; ?>-plain"></i>
             </div>
           <?php
             }
@@ -142,7 +142,7 @@ https://app.netlify.com/signup#_ga=2.154495422.728589584.1519897243-606316059.15
               </div>
           </div>
           <?php } ?>
-        </div>
+        </article>
 
   		</div>
   	</section>
